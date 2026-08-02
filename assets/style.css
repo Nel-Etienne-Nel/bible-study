@@ -365,7 +365,14 @@ mark {
 
 .notes-margin .note {
   position: absolute;
-  width: 15.5rem;
+  /* Take whatever the margin can spare, between a readable minimum and a
+     comfortable maximum — so the notes stay beside the text in narrower
+     windows instead of dropping into it. */
+  width: clamp(
+    10.5rem,
+    (100vw - var(--measure)) / 2 - 3.25rem,
+    15.5rem
+  );
   margin: 0;
   padding: 1.05rem 1.15rem;
   background: transparent;

@@ -16,9 +16,10 @@
   // Populated during render: each note panel and the verse it belongs beside.
   var panels = [];
 
-  // Below this the margins are too narrow to hold notes, so they stay in flow
-  // beneath their verse.
-  var MARGIN_MIN_WIDTH = 1140;
+  // Below this the margins cannot hold even a narrowed note column, so notes
+  // stay in flow beneath their verse. Keep in step with the clamp() on
+  // .notes-margin .note in the stylesheet.
+  var MARGIN_MIN_WIDTH = 980;
 
   /* ------------------------------------------------------------- indexing */
 
