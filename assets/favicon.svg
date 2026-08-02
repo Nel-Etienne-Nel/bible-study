@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#faf7f1"/>
+  <!-- a lily of the valleys: stem, two leaves, three bells -->
+  <path d="M16 27V13" stroke="#7d8a6a" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+  <path d="M16 22c-3.2 0-5.2-1.8-5.6-4.4 2.9-.5 5.1 1.2 5.6 4.4z" fill="#7d8a6a"/>
+  <path d="M16 19c3.2 0 5.2-1.8 5.6-4.4-2.9-.5-5.1 1.2-5.6 4.4z" fill="#7d8a6a"/>
+  <circle cx="16" cy="8" r="3.6" fill="#a3653f"/>
+  <circle cx="10.4" cy="12.4" r="2.6" fill="#a3653f"/>
+  <circle cx="21.6" cy="12.4" r="2.6" fill="#a3653f"/>
+</svg>

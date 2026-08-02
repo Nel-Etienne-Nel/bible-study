@@ -11,9 +11,14 @@ double-clicking the file works.
 index.html            the page
 assets/style.css      the look
 assets/app.js         renders scripture + study data (you shouldn't need to touch this)
+assets/favicon.svg    lily of the valleys
 data/scripture.js     the full text, generated — do not hand-edit
 data/study.js         ← the file you edit
+_headers              caching and security headers for Cloudflare Pages
+build.sh              assembles dist/ for deployment
+wrangler.toml         Cloudflare Pages config
 tools/build_scripture.py  regenerates data/scripture.js
+tools/build_preview.py    flattens the site into a single preview.html
 ```
 
 ## Scripture text
@@ -113,6 +118,42 @@ to any particular verse) plus notes on the verses that got the most time.
 
 All twelve episodes are in — 79 notes across 126 highlighted phrases. To
 revise one, find its notes by the `episode` field and edit in place.
+
+## Deploying to Cloudflare Pages
+
+The site is static — no Workers, no functions, no runtime. `build.sh` copies
+the servable files into `dist/` so that `tools/`, `preview.html` and this
+README aren't published. `dist/` is gitignored.
+
+```sh
+sh build.sh                 # assembles dist/
+npx wrangler pages deploy   # reads pages_build_output_dir from wrangler.toml
+```
+
+The first deploy will ask you to log in and to create the project; take the
+name from `wrangler.toml` (`song-of-solomon-study`) so it matches.
+
+**To deploy from GitHub instead**, connect the repo in the Cloudflare
+dashboard and set:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `sh build.sh` |
+| Build output directory | `dist` |
+| Root directory | *(leave blank)* |
+
+Every push to `main` then rebuilds and deploys. `wrangler.toml` is read
+automatically, so the output directory stays in sync.
+
+### Caching
+
+`_headers` tells Pages to revalidate `index.html` and `data/study.js` on every
+request, because those change whenever an episode is revised and neither
+filename is content-hashed. `data/scripture.js` and everything in `assets/`
+are cached for an hour.
+
+If you edit the CSS or the renderer and don't see the change, that hour is
+why — hard-reload, or shorten the `max-age` in `_headers`.
 
 ## Reading the page
 

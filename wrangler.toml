@@ -1,0 +1,14 @@
+# Cloudflare Pages config.
+#
+# The site is static — no Workers, no functions, no runtime. `build.sh`
+# assembles the servable files into dist/ so that tools/, preview.html and
+# the README don't get published.
+#
+#   npx wrangler pages deploy      # uses pages_build_output_dir below
+#
+# For the Git integration, set the build command to `sh build.sh` in the
+# Pages project settings; the output directory is read from here.
+
+name = "song-of-solomon-study"
+compatibility_date = "2026-08-02"
+pages_build_output_dir = "dist"

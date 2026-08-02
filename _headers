@@ -1,0 +1,25 @@
+# Cloudflare Pages headers. Copied into dist/ by build.sh.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+
+# The page and the study data change whenever an episode is revised, and
+# neither filename is content-hashed — so let the browser revalidate.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data/study.js
+  Cache-Control: public, max-age=0, must-revalidate
+
+# The scripture text and the styling are stable.
+/data/scripture.js
+  Cache-Control: public, max-age=3600
+
+/assets/*
+  Cache-Control: public, max-age=3600
