@@ -58,11 +58,16 @@ appears in the table of contents.
 }
 ```
 
-The twelve sections in the file follow Tommy Nelson's series: Attraction,
-Dating, Courtship (×2), Intimacy (×2), Conflict (×2), Romance (×2), and
-Commitment (×2). Ranges marked `// CONFIRM` were cut off in the playlist
-screenshots and are set to run contiguously so the whole book is covered;
-correct them as each transcript comes in.
+The twelve sections follow Tommy Nelson's series: Attraction, Dating,
+Courtship (×2), Intimacy (×2), Conflict (×2), Romance (×2), and Commitment
+(×2). All twelve are in, and every range has been confirmed against its
+transcript rather than guessed from the playlist titles.
+
+One thing to know if you compare against the playlist: **the two conflict
+sessions run in the opposite order to their titles.** The video titled Part 2
+is the earlier session (5:2–5:9, and it closes by pointing forward to the one
+on how to talk); the video titled Part 1 is the later one (5:10–6:13). They
+are ordered here by content so the page reads straight through.
 
 Sections sort themselves by `start`, so file order doesn't matter.
 
@@ -102,9 +107,12 @@ Several notes can share a verse — list them separately and they stack.
 ## Working from transcripts
 
 The workflow this is built for: a transcript comes in, the points that matter
-get pulled out and attached to the verse being taught on. A transcript that
-covers 2:8–17 usually becomes one section entry (with `mainPoints`) plus a
-handful of notes on the specific verses that got the most time.
+get pulled out and attached to the verse being taught on. A transcript
+becomes one section entry (with `mainPoints` for the material that isn't tied
+to any particular verse) plus notes on the verses that got the most time.
+
+All twelve episodes are in — 79 notes across 126 highlighted phrases. To
+revise one, find its notes by the `episode` field and edit in place.
 
 ## Reading the page
 
