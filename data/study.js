@@ -87,23 +87,43 @@ window.SECTIONS = [
     id: "courtship-1",
     number: "03",
     title: "The Art of Courtship, Part 1",
-    range: "2:8 – 2:17", // CONFIRM
+    range: "2:8 – 2:14",
     start: [2, 8],
     summary:
-      "His voice on the mountains, the call to rise up and come away, and the " +
-      "little foxes that spoil the vines.",
-    episode: { title: "", url: "", mainPoints: [] },
+      "His voice on the mountains, the call to rise up and come away now that " +
+      "winter is past, and the dove drawn out of the clefts of the rock.",
+    episode: {
+      title: "3. The Art of Courtship, Part 1",
+      url: "",
+      mainPoints: [
+        "Dating costs you time and an annoyance. A bad courtship costs you " +
+          "part of your soul — like a tongue on a flagpole in sub-zero " +
+          "weather, you don't get out of it without leaving something behind.",
+        "Dating is observation; courtship is depth. Dating is an end in " +
+          "itself; courtship intends to go to marriage.",
+        "Four planks have to be laid in dating first: the wisdom to evaluate " +
+          "character honestly, consistency, the courage to communicate, and " +
+          "the patience not to escalate.",
+        "What you see is what you get. It is the Holy Spirit's job to " +
+          "transform someone, not yours.",
+        "Two things a man should feel: desire, and life. Time should kindle " +
+          "the relationship, not wear it down — and being together should " +
+          "make your walk with God flourish, not wash out.",
+        "What he does is discovery. You think you know each other after " +
+          "dating. You don't.",
+      ],
+    },
   },
   {
     id: "courtship-2",
     number: "04",
     title: "The Art of Courtship, Part 2",
-    range: "3:1 – 3:5", // CONFIRM
-    start: [3, 1],
+    range: "2:15 – 3:5", // CONFIRM end
+    start: [2, 15],
     summary:
-      "The night search through the city — losing him, looking for him, finding " +
-      "him, and holding on. It ends again with the charge not to awaken love " +
-      "too early.",
+      "The little foxes that plunder the vineyards, and then the night search " +
+      "through the city — losing him, looking for him, finding him, and " +
+      "holding on. It ends again with the charge not to awaken love too early.",
     episode: { title: "", url: "", mainPoints: [] },
   },
   {
@@ -447,5 +467,78 @@ window.NOTES = [
         "returns — you stop relating and start needing the next fix.",
     ],
     episode: "2. The Art of Dating",
+  },
+
+  // ---- 03. The Art of Courtship, Part 1 (2:8–14) -------------------------
+  {
+    ref: [2, 8],
+    phrase: ["leaping on the mountains", "skipping on the hills"],
+    title: "Desire — the first thing he should feel",
+    body:
+      "He is running to close the distance. This is what a man should feel " +
+      "going into courtship, and time should kindle it rather than wear it " +
+      "down. Hence the separation test: when you are apart, is it out of " +
+      "sight out of mind, or do you feel like the stag on the hills?",
+    episode: "3. The Art of Courtship, Part 1",
+  },
+  {
+    ref: [2, 9],
+    phrase: "He glances through the lattice",
+    title: "Close, but still outside the wall",
+    body:
+      "He is at the window, looking in. Near enough to be seen, not yet " +
+      "inside — which is exactly where courtship starts.",
+    episode: "3. The Art of Courtship, Part 1",
+  },
+  {
+    ref: [2, 11],
+    phrase: "the winter is past",
+    title: "Life — the second thing he should feel",
+    body:
+      "Read the season: winter gone, rain over, flowers up, the fig ripening, " +
+      "the vines in blossom. It is spring. A relationship built God's way " +
+      "produces life, and that is the time test.",
+    points: [
+      "Two godly singles start dating and their walk with God goes down — " +
+        "guilt, anger, dropping out of church. That is not springtime.",
+      "It should work the other way: wanting to read your Bible more, to " +
+        "keep pace with the person you are courting.",
+    ],
+    episode: "3. The Art of Courtship, Part 1",
+  },
+  {
+    ref: [2, 13],
+    phrase: "Arise, my love, my beautiful one,",
+    title: "The call to come away",
+    body:
+      "The invitation is to move — out of winter and into the season that has " +
+      "already arrived. Courtship takes the relationship somewhere on purpose.",
+    episode: "3. The Art of Courtship, Part 1",
+  },
+  {
+    ref: [2, 14],
+    phrase: [
+      "My dove in the clefts of the rock",
+      "let me see your face",
+      "let me hear your voice",
+    ],
+    title: "Discovery — what he actually does",
+    body:
+      "To a dove up in the cliffs there is nothing more frightening than a " +
+      "man's hands. She is back in the hiding places, coming out slowly. He " +
+      "thought he knew her in dating; he did not. Courtship is where you go " +
+      "deeper, and that takes discovery — asking to see her face and hear her " +
+      "voice, not reaching in after her.",
+    points: [
+      "Air the linen once: one honest conversation about what you used to be. " +
+        "She can take an imperfect man; she cannot take a deceiver.",
+      "If they cannot forgive what you did against someone else, what happens " +
+        "when they have to forgive what you do against them?",
+      "Ephesians 5 — no spot he cannot get out, no wrinkle, nothing hidden. " +
+        "See Paul, David, Mary Magdalene, Zacchaeus.",
+      "Some of what you learn you will simply stumble on over time. Iron " +
+        "sharpens iron; the two of you will file each other down.",
+    ],
+    episode: "3. The Art of Courtship, Part 1",
   },
 ];
