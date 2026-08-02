@@ -26,7 +26,29 @@ window.SECTIONS = [
       "The song begins with desire, not with a wedding. She wants the king, " +
       "and she is honest about what she thinks of herself — dark from the sun, " +
       "made to keep her brothers' vineyards, her own vineyard untended.",
-    episode: { title: "", url: "", mainPoints: [] },
+    episode: {
+      title: "1. The Art of Attraction",
+      url: "",
+      mainPoints: [
+        "Eight chapters carry one couple from attraction through dating and " +
+          "courtship to marriage, through two chapters of conflict, and on to " +
+          "devotion at the end of life. Not verses scattered here and there — " +
+          "a whole book.",
+        "Two things to watch for in this section: the qualities each one sees " +
+          "in the other, and the standards they hold to cultivate them.",
+        "In both of them the physical is played down and character is lifted " +
+          "up. He has a name; she has a heart. His name outweighs his looks, " +
+          "her heart outweighs her skin.",
+        "You are ready to date and marry when you know the kind of person you " +
+          "will not settle less for, you know the things you will not do, and " +
+          "you are willing to stay single.",
+        "Passion without character is lighter fluid on kindling — a roaring " +
+          "blaze that is out in a second. Embers of morality, honesty and " +
+          "forgiveness burn as long as you keep putting wood on.",
+        "All that glitters is not gold — and all that is gold may not " +
+          "necessarily glitter.",
+      ],
+    },
   },
   {
     id: "dating",
@@ -155,21 +177,101 @@ window.SECTIONS = [
 ];
 
 window.NOTES = [
-  // Example note — delete this once the first episode goes in. It shows every
-  // field a note can carry.
+  // ---- 01. The Art of Attraction (1:1–7) ---------------------------------
+  {
+    ref: [1, 2],
+    title: "A married couple looking back",
+    body:
+      "Verses 2 to 4 are the voice of a woman already married, remembering " +
+      "what drew her to him in the first place. Attraction is being examined " +
+      "in hindsight — by people whose marriage lasted.",
+    episode: "1. The Art of Attraction",
+  },
+  {
+    ref: [1, 3],
+    phrase: ["pleasing fragrance", "Your name is oil poured out"],
+    title: "His name, not his looks",
+    body:
+      "In a day when men bathed rarely, a man covered himself in perfume. She " +
+      "is telling him he is a good-looking man — and there is nothing wrong " +
+      "with that. But look at what takes precedence over it. A man's name is " +
+      "his character. Our word character comes from charassō, a metal tool " +
+      "for etching: something cut into a life that will not fade away.",
+    points: [
+      "His name means his integrity, his holiness, his honesty, his " +
+        "temperance, whether he can be corrected, whether he can listen.",
+      "A man can be handsome, wealthy, and impressive, and still be a man " +
+        "who pouts, stomps out, and cannot open his heart to you.",
+      "You will spend a marriage loving the soul of your mate, not the " +
+        "surface of them. “Sin is always ugly in the dark.”",
+      "If he is pressing you morally while dating, he does not fear God's " +
+        "standard. His obedience as a single man is a harbinger of the " +
+        "husband he will be.",
+      "A marriage to a bad person does not assuage the loneliness of being " +
+        "single — it removes the hope that went with it.",
+    ],
+    episode: "1. The Art of Attraction",
+  },
   {
     ref: [1, 4],
-    phrase: "Take me away with you",
-    title: "The prayer that starts everything",
+    phrase: ["Take me away with you", "right to love you"],
+    title: "Logical, a privilege, a delight, and right",
     body:
-      "The whole book turns on a request, not an achievement. She does not " +
-      "climb toward the king; she asks to be taken. Every movement that " +
-      "follows in the Song is a response to that first pull.",
+      "Four things sound in a row. Marrying this man is logical — every " +
+      "maiden would want him. It is a privilege — draw me after you and let " +
+      "us run together. It is a delight — he has brought me into his rooms. " +
+      "And it is right.",
     points: [
-      "Desire is the evidence of having already been drawn, not the price of it.",
-      "“Let’s hurry” — the drawing produces motion, immediately.",
+      "“Let us run together” — attraction that puts two people in motion in " +
+        "the same direction.",
+      "Everyone has been to a wedding where they kept the receipt on the " +
+        "gift: two combustible people, and you could tell it would not hold.",
+      "Rightly do they love you — the people watching can tell the " +
+        "difference between passion and something that is righteous.",
     ],
-    episode: "",
-    timestamp: "",
+    episode: "1. The Art of Attraction",
+  },
+  {
+    ref: [1, 5],
+    phrase: "dark, but lovely",
+    title: "Lovely, and honest about the drawback",
+    body:
+      "She calls herself lovely and in the same breath names a physical " +
+      "shortcoming. To an eastern woman her skin was her most prized " +
+      "possession. Kedar was a bedouin tribe whose tents were woven from " +
+      "black wool; Solomon's curtains were purple.",
+    episode: "1. The Art of Attraction",
+  },
+  {
+    ref: [1, 6],
+    phrase: ["keeper of the vineyards", "my own vineyard"],
+    title: "She had not kept her own vineyard",
+    body:
+      "Her mother's sons are her brothers. They put her out to keep the " +
+      "vineyards, and her own vineyard — her own body, her own appearance — " +
+      "went untended. Her looks are played down exactly as his were.",
+    points: [
+      "She submitted to the authority over her.",
+      "She was a hard worker, and a servant.",
+      "Watch how someone treats the people already in their life — parents, " +
+        "roommates. That is how they will eventually treat you.",
+    ],
+    episode: "1. The Art of Attraction",
+  },
+  {
+    ref: [1, 7],
+    phrase: "one who is veiled",
+    title: "The line she would not cross",
+    body:
+      "Veiled women followed the flocks and gave themselves to the shepherds. " +
+      "She is saying there are things she will not do to have this man, however " +
+      "good he is. She would stay single before she would trade her " +
+      "relationship with God for him.",
+    points: [
+      "You are ready to marry when you know the kind of person you will wait for.",
+      "You are ready when you know the things you will not do.",
+      "You are ready when you are willing to be single.",
+    ],
+    episode: "1. The Art of Attraction",
   },
 ];

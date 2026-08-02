@@ -119,7 +119,9 @@
 
   function renderNote(note) {
     var panel = el("div", "note");
-    panel.id = "note-" + note.ref[0] + "-" + note.ref[1];
+    // Keyed by attribute rather than id — a verse can carry several notes, and
+    // ids have to stay unique.
+    panel.dataset.notePanel = note.ref[0] + ":" + note.ref[1];
     panel.hidden = true;
 
     panel.appendChild(
@@ -203,10 +205,13 @@
               span.appendChild(el("sup", "vnum", String(seg.v)));
             }
 
+            // `phrase` may be a single string or a list of them.
             writeText(
               span,
               seg.t,
-              verseNotes.map(function (n) { return n.phrase; }).filter(Boolean)
+              verseNotes.reduce(function (all, n) {
+                return all.concat(n.phrase || []);
+              }, [])
             );
 
             if (lineEl.childNodes.length) {
@@ -249,9 +254,7 @@
   /* ------------------------------------------------------------ interaction */
 
   function notePanels(key) {
-    var id = "note-" + key.replace(":", "-");
-    var panel = document.getElementById(id);
-    return panel ? [panel] : [];
+    return document.querySelectorAll('[data-note-panel="' + key + '"]');
   }
 
   function toggleNote(key) {

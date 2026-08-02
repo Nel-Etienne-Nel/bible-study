@@ -88,6 +88,15 @@ highlights. Matching ignores case, and straight quotes match curly ones, so
 `"Let's hurry"` finds `Let’s hurry`. Leave `phrase` out to mark the verse
 without highlighting any particular words.
 
+Pass a list to highlight several phrases in one verse:
+
+```js
+phrase: ["pleasing fragrance", "Your name is oil poured out"],
+```
+
+Keep phrases short — the few words carrying the point, not the whole
+sentence. Highlighting entire lines reads as heavy rather than as emphasis.
+
 Several notes can share a verse — list them separately and they stack.
 
 ## Working from transcripts
