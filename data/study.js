@@ -60,7 +60,28 @@ window.SECTIONS = [
       "The first exchange between them. He tells her what he sees; she answers. " +
       "Praise moves back and forth until it closes on the charge not to stir up " +
       "love before it pleases.",
-    episode: { title: "", url: "", mainPoints: [] },
+    episode: {
+      title: "2. The Art of Dating",
+      url: "",
+      mainPoints: [
+        "Three things a dating relationship needs: time with no strings " +
+          "attached, cultivation, and restraint.",
+        "Time, but not anywhere that makes provision for the flesh. This " +
+          "couple eats together and picnics in the open.",
+        "Cultivation runs in two steps — regard, then respect. He calls her " +
+          "the mare among Pharaoh's chariots; she calls him her sachet of " +
+          "myrrh. Then: you are beautiful, and you are pleasant.",
+        "Respect and romance are cousins. You cannot love someone you do not " +
+          "like — so marry your best friend.",
+        "Watch what grows: her view of herself climbs from “don't stare at " +
+          "me” to “I am a rose of Sharon”, because of how he treats her.",
+        "Sex is the fireplace, not the house. In its place it is warmth and " +
+          "light; out of its place it burns the whole thing down and leaves " +
+          "you nothing but a sex drive.",
+        "Restraint is the man's move to make. The passage closes with him " +
+          "saying the feeling is good, but it is waiting for a later day.",
+      ],
+    },
   },
   {
     id: "courtship-1",
@@ -273,5 +294,158 @@ window.NOTES = [
       "You are ready when you are willing to be single.",
     ],
     episode: "1. The Art of Attraction",
+  },
+  // ---- 02. The Art of Dating (1:8–2:7) -----------------------------------
+  {
+    ref: [1, 9],
+    phrase: "a steed in Pharaoh’s chariots",
+    title: "The mare among Pharaoh's chariots",
+    body:
+      "The mare that led Pharaoh's chariots was a white steed at the head of " +
+      "the whole army — the most precious animal in Egypt, close to a deity. " +
+      "Calling her that is not a comment on her build. He is saying she is " +
+      "beyond monetary value: infinite, in how he sees her.",
+    points: [
+      "This is regard — the first half of cultivating a relationship.",
+      "A woman in a bad marriage once said she did not want her husband to " +
+        "be romantic, only civil: “I wish he would treat me like a Denny's " +
+        "waitress.” He was kind to everyone but her.",
+    ],
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [1, 12],
+    phrase: "While the king sat at his table",
+    title: "They spend time together",
+    body:
+      "They eat together here, and picnic in the open in verses 16 and 17. " +
+      "Time with no strings attached — and deliberately not in a place that " +
+      "makes provision for the flesh.",
+    points: [
+      "“Make no provision for the flesh, in regard to its lusts.” If you park " +
+        "somewhere dark and get tempted, of course you did.",
+    ],
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [1, 13],
+    phrase: "a sachet of myrrh",
+    title: "She thinks about him",
+    body:
+      "Myrrh was an expensive aromatic resin, and a pouch of perfume was a " +
+      "woman's most precious possession — the thing that gave her her " +
+      "fragrance. She is saying he is that to her, lying against her all " +
+      "night. She dreams about him. Regard runs both directions.",
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [1, 15],
+    phrase: "Your eyes are like doves",
+    title: "Regard becomes respect",
+    body:
+      "You handle a dove gently — you reach out to hold it, carefully. He is " +
+      "looking at her beauty, but a deeper one: what Peter calls the " +
+      "imperishable quality of a gentle and quiet spirit, which is precious " +
+      "in the sight of God.",
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [1, 16],
+    phrase: "yes, pleasant",
+    title: "Marry your best friend",
+    body:
+      "“Pleasant” is the same word used of how David felt about Jonathan. " +
+      "She is calling him her best friend. Respect and romance are cousins — " +
+      "you cannot love someone you do not like.",
+    points: [
+      "The old Jimmy Stewart line: “I love her.” “I didn't ask that. Do you " +
+        "like her?”",
+      "If your mate cannot be your friend, you do not want them as your mate.",
+    ],
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [1, 17],
+    phrase: "The beams of our house are cedars",
+    title: "A picnic she calls a mansion",
+    body:
+      "They are outdoors among the cedars and firs, and she calls it a couch " +
+      "and a house. He is so pleasant, so tactful, such a good listener, that " +
+      "simply being with him makes her feel like a queen. Note what has not " +
+      "happened yet — he has not so much as touched her.",
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [2, 1],
+    phrase: ["a rose of Sharon", "a lily of the valleys"],
+    title: "What his regard did to her",
+    body:
+      "Both nouns are singular — roses and lilies do not grow in clumps. In " +
+      "chapter 1 she said don't stare at me, I am sunburned, I did not keep " +
+      "my own vineyard. Now she says she is the most special woman on earth. " +
+      "Nothing changed but how he treated her.",
+    points: [
+      "The devil will find someone to tell your wife she is special if you " +
+        "will not.",
+    ],
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [2, 3],
+    phrase: ["under his shadow", "his fruit was sweet to my taste"],
+    title: "Shade and fruit — he protects and provides",
+    body:
+      "Every other man meets no need she has. His shade is protection: she is " +
+      "never afraid to come close, because she knows he will not demean her " +
+      "or handle her roughly. His fruit is provision. The New Testament says " +
+      "it as nourishing and cherishing her as Christ does the church.",
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [2, 4],
+    phrase: "His banner over me is love",
+    title: "In public, under his banner",
+    body:
+      "The banquet hall is a public place. Generals identified their troops " +
+      "by a banner — the mark of who they belonged to. His mark of ownership " +
+      "over her is love, and anyone in the room can see it in how he treats " +
+      "her.",
+    points: [
+      "Pull the chair out. Open the door. Introduce her by name.",
+      "Never walk in front of your wife — walk with her.",
+      "Never let a child challenge her. You handle that, not her.",
+    ],
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [2, 5],
+    phrase: ["Strengthen me with raisins", "I am faint with love"],
+    title: "Raisin cakes",
+    body:
+      "Raisin cakes were held to be aphrodisiacs — full of seeds — and were " +
+      "used in pagan worship, which is why Hosea holds Israel in contempt for " +
+      "chasing other gods with them. When David brought the ark into " +
+      "Jerusalem and sent the nation home to be fruitful and multiply, he " +
+      "gave every one of them raisin cakes. This is a passionate statement. " +
+      "She wants him.",
+    episode: "2. The Art of Dating",
+  },
+  {
+    ref: [2, 7],
+    phrase: ["not stir up, nor awaken love", "until it so desires"],
+    title: "Good, but not yet",
+    body:
+      "He answers her desire not by rebuking it but by dating it. Solomon " +
+      "speaks of her in the gentlest terms he has — the roes and hinds of the " +
+      "field, the same picture Proverbs uses for a wife — and says that what " +
+      "she feels is good, and is waiting to be awakened on a later day.",
+    points: [
+      "Restraint is the man's initiative to take.",
+      "Sex is the fireplace, not the house: in its place, warmth and light; " +
+        "out of its place, it burns the whole thing down.",
+      "Build on sensuality instead and you get the law of diminishing " +
+        "returns — you stop relating and start needing the next fix.",
+    ],
+    episode: "2. The Art of Dating",
   },
 ];
