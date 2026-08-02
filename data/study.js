@@ -291,7 +291,7 @@ window.SECTIONS = [
     id: "romance-1",
     number: "09",
     title: "The Art of Romance, Part 1",
-    range: "7:1 – 7:9a",
+    range: "7:1 – 7:2",
     start: [7, 1],
     summary:
       "Married love that has not gone cold. He describes her again — and this " +
@@ -328,13 +328,36 @@ window.SECTIONS = [
     id: "romance-2",
     number: "10",
     title: "The Art of Romance, Part 2",
-    range: "7:9b – 8:4", // CONFIRM end
-    start: [7, 10],
+    range: "7:3 – 8:4",
+    start: [7, 3],
     summary:
-      "She takes over mid-verse. “I am my beloved’s, and his desire is " +
-      "toward me.” Her invitation to go out to the field, and what she has " +
-      "laid up for him.",
-    episode: { title: "", url: "", mainPoints: [] },
+      "The rest of the ten, and then she takes over mid-verse. “I am my " +
+      "beloved’s, and his desire is toward me.” Her invitation to go out to " +
+      "the field, and what she has stored up for him.",
+    episode: {
+      title: "10. The Art of Romance, Part 2",
+      url: "",
+      mainPoints: [
+        "He handles his wife in marriage exactly as he did on the honeymoon. " +
+          "Nothing about a wedding licenses a man to start pawing at her.",
+        "Non-sexual touch matters. If a man only reinforces his love when he " +
+          "is already aroused, his wife feels hustled.",
+        "A survey put to women found the overwhelming majority cared less " +
+          "about the physical peak than about being held, spoken to and " +
+          "treated gently.",
+        "Ten deepenings in all: knowledge, exaltation, praise, appreciation, " +
+          "gentleness, respect, delight, trust, admiration, devotion — and " +
+          "then passion.",
+        "Great sex is built on those ten, not on a body or a full head of " +
+          "hair. And what a husband least wants is a wife who lies there like " +
+          "a flower waiting to be pollinated.",
+        "Shakespeare's sonnet: a man with a key to a chest of jewels does not " +
+          "open it every hour, or he loses the appreciation. You cannot have " +
+          "the passion all the time — but you can build the fireplace, the " +
+          "logs, the fuel and the match.",
+        "A marriage sliding into lethargy is as unbiblical as adultery.",
+      ],
+    },
   },
   {
     id: "commitment-1",
@@ -1256,17 +1279,6 @@ window.NOTES = [
     episode: "9. The Art of Romance, Part 1",
   },
   {
-    ref: [7, 6],
-    phrase: ["How beautiful and how pleasant you are"],
-    title: "Praise to her face",
-    body:
-      "Not about her, to her. Marriage conferences charge couples money to " +
-      "sit knee to knee and read aloud what they have never managed to say — " +
-      "and the men are the ones who end up weeping, because going down deep " +
-      "turns out to be the good part.",
-    episode: "9. The Art of Romance, Part 1",
-  },
-  {
     ref: [7, 9],
     phrase: ["that goes down smoothly for my beloved"],
     title: "Where the voice changes",
@@ -1274,6 +1286,119 @@ window.NOTES = [
       "He has spoken from verse 1 to here. Halfway through this verse she " +
       "takes it up and answers — which is the shape of the whole passage. " +
       "The man initiates; the woman responds.",
-    episode: "9. The Art of Romance, Part 1",
+    episode: "10. The Art of Romance, Part 2",
+  },
+  // ---- 10. The Art of Romance, Part 2 (7:3–8:4) --------------------------
+  {
+    ref: [7, 3],
+    phrase: ["like two fawns", "that are twins of a roe"],
+    title: "Gentleness — the same words as the honeymoon",
+    body:
+      "Word for word what he said in 4:5, on the wedding night. Years in, he " +
+      "still handles his wife the way he handled her then. Where men get the " +
+      "idea that a wedding licenses them to start pawing at her is a mystery.",
+    points: [
+      "Non-sexual touch: a hand held, an arm around her, sitting close. What " +
+        "wounds a woman is a husband who only shows affection once he is " +
+        "already aroused — then she feels hustled.",
+    ],
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 4],
+    phrase: ["like an ivory tower", "the pools in Heshbon", "the tower of Lebanon which looks toward Damascus"],
+    title: "Respect, delight, and trust — three in one verse",
+    body:
+      "Ivory was so costly that a king of Israel is marked out as wicked for " +
+      "building with it: I revere you. The pools at Heshbon were where you " +
+      "got in to cool off: being with you is a rest for me. And the tower of " +
+      "Lebanon faced north toward Damascus — the only direction Jerusalem " +
+      "could be attacked from. While it stood, the city was safe. He is " +
+      "saying: I can trust you.",
+    points: [
+      "A survey once put to women found the great majority cared far less " +
+        "about the physical peak than about being held, spoken to, and " +
+        "treated with gentleness.",
+      "Proverbs: a wife who shames her husband is rottenness in his bones. " +
+        "Not this one — her face is the safest thing he knows.",
+    ],
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 5],
+    phrase: ["like Carmel", "The king is held captive in its tresses"],
+    title: "Admiration — the king held captive",
+    body:
+      "Carmel was the postcard of Israel, the rolling green place everyone " +
+      "pictured. Purple came from a shellfish and was the colour of royalty. " +
+      "Then the line that undoes him: nothing on earth could hold Solomon, " +
+      "and her hair does. The most powerful man alive is saying — you own me.",
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 6],
+    phrase: ["How beautiful and how pleasant you are"],
+    title: "Devotion — I am in your spell",
+    body:
+      "The word behind *delights* is the word for magic. He is telling her he " +
+      "is under her spell, and he is not looking for a way out. A seminary " +
+      "director whose wife was dying of Alzheimer's told a room of students " +
+      "that he now bathed and changed the woman who had spent her life caring " +
+      "for him, that she no longer knew who he was, and that he counted it " +
+      "the greatest privilege God had given him.",
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 8],
+    phrase: ["I will climb up into the palm tree"],
+    title: "Passion — from a garden to an oasis",
+    body:
+      "On the honeymoon she was a garden and he asked the wind to blow " +
+      "through it. Now she is a palm and he is climbing it. In Exodus, Israel " +
+      "came out of hard country over a rise and found Elim — date palms and " +
+      "water enough for a whole nation. That is what he says his wife is to " +
+      "him. And note what this passage is not about: not children, not " +
+      "fertility. Proverbs says the same thing — be intoxicated always with " +
+      "the wife of your youth.",
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 10],
+    phrase: ["His desire is toward me"],
+    title: "That word *desire*",
+    body:
+      "It has appeared twice before in the Old Testament, and the second is " +
+      "God to Cain: sin is crouching at the door, and its desire is for you. " +
+      "It is the word for one animal consuming another. That is the force she " +
+      "is claiming her husband feels for her, and she is glad of it.",
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [7, 13],
+    phrase: ["The mandrakes produce fragrance", "new and old"],
+    title: "New and old — she has not gone stagnant",
+    body:
+      "Mandrake root was thought to look like a man, and was eaten for desire " +
+      "and for fertility — Rachel and Leah quarrel over a handful of them in " +
+      "Genesis. She is saying: come away with me, I have something for you. " +
+      "And then *new and old*. There are time-honoured ways between them that " +
+      "still work, and she has been saving up some new ones.",
+    points: [
+      "The instruction here runs to the wife as plainly as the previous ten " +
+        "ran to the husband. Do not go dormant.",
+    ],
+    episode: "10. The Art of Romance, Part 2",
+  },
+  {
+    ref: [8, 1],
+    phrase: ["Oh that you were like my brother", "no one would despise me"],
+    title: "She wishes she could love him in public",
+    body:
+      "In that culture you did not touch in the street — unless you were " +
+      "brother and sister. Her complaint is that the only affection she is " +
+      "allowed in public is the kind siblings get, and she wants more than " +
+      "that. Go to Israel today and an orthodox Jew will still slap your hand " +
+      "for it.",
+    episode: "10. The Art of Romance, Part 2",
   },
 ];
