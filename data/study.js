@@ -217,19 +217,42 @@ window.SECTIONS = [
     id: "conflict-1",
     number: "07",
     title: "The Art of Conflict, Part 1",
-    range: "5:2 – 5:16", // CONFIRM
+    range: "5:2 – 6:13", // CONFIRM — see note above
     start: [5, 2],
     summary:
       "He knocks; she hesitates. By the time she opens the door he is gone. " +
       "The search that follows costs her something, and she still answers the " +
-      "daughters of Jerusalem by describing him head to foot.",
-    episode: { title: "", url: "", mainPoints: [] },
+      "daughters of Jerusalem by describing him head to foot — and the " +
+      "conflict ends closer than it began.",
+    episode: {
+      title: "7. The Art of Conflict, Part 1",
+      url: "",
+      mainPoints: [
+        "Four steps through conflict: don't react, respond. Let God change " +
+          "them. Talk. Forgive and forget.",
+        "No woman brags about an angry husband. Nobody stands at a funeral " +
+          "and praises the man for his temper.",
+        "The four standing problems in a marriage are communication, money, " +
+          "sex and in-laws — and the in-laws run in that order: his mother, " +
+          "her mother, then her father.",
+        "How to talk: never speak rashly, never confront in public or in " +
+          "front of the children, never use the children, never say always or " +
+          "never, never go historical, never raise your voice, never call " +
+          "names, never drag in family, never condescend, never demean — and " +
+          "never win. When you win a conflict you lose a mate.",
+        "How to listen: with your face. Don't reason with her, don't argue, " +
+          "don't interrupt, don't walk out, don't vent to people outside the " +
+          "marriage, and watch your body language.",
+        "Where sin increased, grace abounded. The way a couple grows close is " +
+          "through conflict — this one ends in a party.",
+      ],
+    },
   },
   {
     id: "conflict-2",
     number: "08",
     title: "The Art of Conflict, Part 2",
-    range: "6:1 – 6:13", // CONFIRM
+    range: "6:1 – 6:13", // CONFIRM — episode 7 already covers this ground
     start: [6, 1],
     summary:
       "Where has he gone? He was in his garden the whole time. The restoration, " +
@@ -917,5 +940,127 @@ window.NOTES = [
       "Passion and purity are never in conflict.",
     ],
     episode: "6. The Art of Intimacy, Part 2",
+  },
+  // ---- 07. The Art of Conflict, Part 1 (5:10–6:13) -----------------------
+  {
+    ref: [5, 10],
+    phrase: ["The best among ten thousand"],
+    title: "How he grew in her eyes",
+    body:
+      "Men assume that being gentle with a wife makes them less of a man. " +
+      "Watch what this woman thinks of a magnanimous one: the finest of ten " +
+      "thousand, unique, the best there is. No woman ever bragged about her " +
+      "husband's temper, and nobody stands at a graveside praising a man for " +
+      "his anger.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 12],
+    phrase: ["washed with milk, mounted like jewels"],
+    title: "His eyes never change",
+    body:
+      "Doves at the water brooks — completely at peace in a place of " +
+      "blessing. And the word behind *mounted* is the word used in Exodus for " +
+      "the sockets of the tabernacle: set, fixed, immovable. His eyes never " +
+      "narrow and never flare. She has watched them, and they do not change. " +
+      "He is immutable in his kindness.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 13],
+    phrase: ["His lips are like lilies, dropping liquid myrrh"],
+    title: "What his mouth is full of",
+    body:
+      "His cheeks she wants to lay her head against. His lips drip myrrh — " +
+      "kindness, tenderness, romance, apologies, forgiveness. That is what " +
+      "comes out of him.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 14],
+    phrase: ["His hands are like rings of gold set with beryl"],
+    title: "His hands, and what is behind them",
+    body:
+      "Gentle hands. Women come into a pastor's study with bruises on their " +
+      "arms where they have been gripped, then bruises on the face, then a " +
+      "broken nose. And in Hebrew thought the belly is the seat of the " +
+      "emotions — his are carved ivory, pure white.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 16],
+    phrase: ["yes, he is altogether lovely", "this is my friend"],
+    title: "A man's man, and a woman's man",
+    body:
+      "Hands, feet, body, cheeks, lips, words, hair, heart — every one of " +
+      "them tender. Not a man who proved his strength by being unforgiving " +
+      "and hard. She ends the list by calling him her friend.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [6, 2],
+    phrase: ["My beloved has gone down to his garden"],
+    title: "She knows exactly where he is",
+    body:
+      "They ask her where he has gone, and she knows — because he has never " +
+      "changed. He is where a gentle shepherd would be. Reverse it and it " +
+      "holds for a husband too: a man who has wronged his wife should never " +
+      "have to wonder where to find her. Not gone to her mother, not stormed " +
+      "out, not off telling her friends about him.",
+    points: [
+      "“God delights in unchanging love.” That is the vow — for better or " +
+        "worse, made in the name of the Trinity, and you do not take that " +
+        "name in vain.",
+    ],
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [6, 4],
+    phrase: ["awesome as an army with banners"],
+    title: "Forgiveness — he answers as if nothing happened",
+    body:
+      "This is the first thing he says after the whole rupture: you are " +
+      "beautiful, and I respect you, and you are as lovely as I have ever " +
+      "known you. Read on and 6:5–7 is word for word the language of the " +
+      "honeymoon. He is telling her: I love you exactly as I always did.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [6, 9],
+    phrase: ["My dove, my perfect one, is unique"],
+    title: "Sixty queens, and only one of her",
+    body:
+      "Set against every other woman available to a king, she is the one. " +
+      "Forgiveness that does not merely pardon but restores her to the only " +
+      "place she ever held.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [6, 12],
+    phrase: ["my desire set me with my royal people’s chariots"],
+    title: "Forgetting, not just forgiving",
+    body:
+      "Setting someone in your chariots was the highest honour that culture " +
+      "had, and it meant total reconciliation — Ahab was condemned for doing " +
+      "it for a Syrian king. He is saying more than *I forgive you*. He is " +
+      "saying he cannot remember what she did; it is as though it never " +
+      "happened.",
+    points: [
+      "Clara Barton, asked about someone who had wronged her: “I distinctly " +
+        "remember forgetting that.”",
+    ],
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [6, 13],
+    phrase: ["Return, return, Shulammite!", "as at the dance of Mahanaim"],
+    title: "Her name, and the party at the end",
+    body:
+      "Shulammite is not a name — it is the feminine of Solomon, the way " +
+      "Thomas gives Thomasina. It says whose she is. And Mahanaim means two " +
+      "companies: his and hers, dancing. The conflict has ended in a party. " +
+      "Where sin increased, grace abounded — this is how a couple grows " +
+      "close.",
+    episode: "7. The Art of Conflict, Part 1",
   },
 ];
