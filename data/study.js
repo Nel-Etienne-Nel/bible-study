@@ -363,22 +363,47 @@ window.SECTIONS = [
     id: "commitment-1",
     number: "11",
     title: "The Art of Commitment, Part 1",
-    range: "8:5 – 8:7", // CONFIRM
+    range: "8:5 – 8:9",
     start: [8, 5],
     summary:
       "The seal on the heart. Love as strong as death, jealousy as cruel as " +
-      "the grave, and many waters that cannot quench it.",
-    episode: { title: "", url: "", mainPoints: [] },
+      "the grave, many waters that cannot quench it — and then two brothers " +
+      "asking how they will know their little sister is ready.",
+    episode: {
+      title: "11. The Art of Commitment, Part 1",
+      url: "",
+      mainPoints: [
+        "Stallone said boxing is wonderful conditioning as long as somebody " +
+          "can holler cut. That is how a lot of people approach marriage — " +
+          "fine, so long as it can be called off.",
+        "Seven things this couple believes about their commitment: it is " +
+          "planned, possessive, permanent, divine, persevering, priceless, " +
+          "and providential.",
+        "Taking the Lord's name in vain is not mainly about cursing — there " +
+          "is another commandment for that. It means swearing a false oath. " +
+          "Your wedding may be the only time in your life you swear on each " +
+          "person of the Trinity.",
+        "Nobody marries you thinking you are perfect. She marries you because " +
+          "the ratio of kind, respectful, listening treatment far outweighs " +
+          "the times you have to say sorry. Let that ratio slip and she " +
+          "starts imagining your early funeral.",
+        "Possessive does not mean smothering. Find the ability God gave your " +
+          "wife and spend money on it. No woman should feel she climbed onto " +
+          "a cross to marry you.",
+        "Go into a marriage with an escape clause and you will probably use " +
+          "it. “He swears to his own hurt, and does not change.”",
+      ],
+    },
   },
   {
     id: "commitment-2",
     number: "12",
     title: "The Art of Commitment, Part 2",
-    range: "8:8 – 8:14", // CONFIRM
-    start: [8, 8],
+    range: "8:10 – 8:14", // CONFIRM start
+    start: [8, 10],
     summary:
-      "The little sister, the wall and the door, Solomon’s vineyard let " +
-      "out to keepers — and the last word of the book, spoken by her.",
+      "“I am a wall.” Solomon’s vineyard let out to keepers against her " +
+      "own — and the last word of the book, spoken by her.",
     episode: { title: "", url: "", mainPoints: [] },
   },
 ];
@@ -1400,5 +1425,96 @@ window.NOTES = [
       "that. Go to Israel today and an orthodox Jew will still slap your hand " +
       "for it.",
     episode: "10. The Art of Romance, Part 2",
+  },
+  // ---- 11. The Art of Commitment, Part 1 (8:5–8:9) -----------------------
+  {
+    ref: [8, 5],
+    phrase: ["leaning on her beloved", "Under the apple tree I aroused you"],
+    title: "Planned — and look who is coming up from the wilderness now",
+    body:
+      "The same question was asked in 3:6 about the wedding procession: who " +
+      "is this coming up from the wilderness? That was him. This is her, and " +
+      "she is leaning. She is barely recognisable — a woman transformed by " +
+      "the way her husband has treated her. Then he names the place it began. " +
+      "The fig tree in Israel is where you meditate and the olive stands for " +
+      "the nation; the apple is the tree of love.",
+    points: [
+      "*I aroused you* is the same verb as the charge he gave three times — " +
+        "do not awaken love before it pleases. Here is where it was awakened, " +
+        "at the right time.",
+      "He does not say she came to love him. He says her mother bore her " +
+        "there — she was born for him. Abraham believed the same thing when " +
+        "he sent for a wife for Isaac: God will send his angel ahead of you.",
+    ],
+    episode: "11. The Art of Commitment, Part 1",
+  },
+  {
+    ref: [8, 6],
+    phrase: ["Set me as a seal on your heart", "as a seal on your arm"],
+    title: "Possessive — the seal",
+    body:
+      "A seal was proof of ownership and a guarantee of safe passage: Judah " +
+      "handed his over as security in Genesis, and a Roman letter travelled " +
+      "under one. She asks for two. On the heart — no other woman inside " +
+      "you. On the arm — no other woman under it.",
+    points: [
+      "Which means: no flirting, and no pornography. There is little more " +
+        "corrosive to a wife than that.",
+      "“Love is not jealous” is about not envying a friend's honour. One of " +
+        "God's own names is Jealous — he will not share Israel with anyone.",
+      "But do not smother. There is an inner circle of confidence that only " +
+        "a spouse enters, and outside it she should be freer for having " +
+        "married you, not smaller.",
+    ],
+    episode: "11. The Art of Commitment, Part 1",
+  },
+  {
+    ref: [8, 6],
+    phrase: ["love is strong as death", "a very flame of Yahweh"],
+    title: "Permanent, and divine",
+    body:
+      "Death is the one thing nobody negotiates their way back from — and " +
+      "that is the measure of this love. Then the fire, and the covenant name " +
+      "itself: a flame of Yahweh. That is the name behind God's unfailing " +
+      "love for Israel, and it is what a marriage vow is made of.",
+    points: [
+      "The honest version of the vow is *till death do us part* — and mean " +
+        "it the way a cemetery fence means it.",
+      "“Who shall separate us from the love of Christ?” “I will never leave " +
+        "you nor forsake you.” He never calls cut on us either.",
+    ],
+    episode: "11. The Art of Commitment, Part 1",
+  },
+  {
+    ref: [8, 7],
+    phrase: ["Many waters can’t quench love", "he would be utterly scorned"],
+    title: "Persevering, and priceless",
+    body:
+      "No flood puts this fire out. Hosea is the whole book of it — told to " +
+      "go and love again a woman who had left him for other men, *even as " +
+      "the Lord loves the children of Israel*. The word running through it " +
+      "is *hesed*, loyal love that does not stop. And then: offer everything " +
+      "you own for love and you would be laughed at. It cannot be bought, " +
+      "and it cannot be badgered out of someone either.",
+    episode: "11. The Art of Commitment, Part 1",
+  },
+  {
+    ref: [8, 9],
+    phrase: ["If she is a wall", "If she is a door"],
+    title: "Providential — how the brothers will know",
+    body:
+      "Two brothers ask how they will know their young sister is ready to be " +
+      "spoken for. Her father is never mentioned anywhere in this book; the " +
+      "brothers are the ones watching over her. And the answer is not an age. " +
+      "A wall is closed — she has standards, she can say no, she will stay " +
+      "single before she will sell out. A door swings open to whoever pushes " +
+      "it. To the wall they add silver; the door they board up.",
+    points: [
+      "When is someone ready to marry? When they are willing to stay single " +
+        "rather than disobey God. It is a condition of the heart, not a " +
+        "birthday — there are people with grown children who are not ready " +
+        "to date.",
+    ],
+    episode: "11. The Art of Commitment, Part 1",
   },
 ];
