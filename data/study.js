@@ -11,9 +11,15 @@
 // Nothing else needs touching. See README.md for the field reference.
 // ---------------------------------------------------------------------------
 
-// Ranges were cut off in the playlist screenshots, so the later ones are still
-// set to run contiguously and are marked CONFIRM. Each gets settled for certain
-// when that episode's transcript comes in — 1 through 4 are now confirmed.
+// Ranges were cut off in the playlist screenshots, so the remaining ones (09
+// onward) are still set to run contiguously and are marked CONFIRM. Each gets
+// settled when that episode's transcript comes in — 1 through 8 are confirmed.
+//
+// Note on 7 and 8: the two conflict sessions run in the opposite order to
+// their titles. The video titled Part 2 is the first session (5:2-5:9, and it
+// closes by pointing forward to the one on how to talk); the video titled
+// Part 1 is the second (5:10-6:13). They are ordered here by content, so the
+// page reads straight through.
 
 window.SECTIONS = [
   {
@@ -217,19 +223,52 @@ window.SECTIONS = [
     id: "conflict-1",
     number: "07",
     title: "The Art of Conflict, Part 1",
-    range: "5:2 – 6:13", // CONFIRM — see note above
+    range: "5:2 – 5:9",
     start: [5, 2],
     summary:
-      "He knocks; she hesitates. By the time she opens the door he is gone. " +
-      "The search that follows costs her something, and she still answers the " +
-      "daughters of Jerusalem by describing him head to foot — and the " +
-      "conflict ends closer than it began.",
+      "He knocks at the door wanting his wife, and she will not get up. By " +
+      "the time she opens it he is gone, and the search costs her something.",
     episode: {
       title: "7. The Art of Conflict, Part 1",
       url: "",
       mainPoints: [
-        "Four steps through conflict: don't react, respond. Let God change " +
-          "them. Talk. Forgive and forget.",
+        "Conflict gets two of the eight chapters — a quarter of the book, " +
+          "which is about right for a marriage.",
+        "All couples fight. Good couples fight clean and press for a " +
+          "resolution; bad couples fight dirty and press for a victory.",
+        "“Where no oxen are, the crib is clean, but much increase comes by " +
+          "the strength of the ox.” No oxen, clean barn, no crop. You do not " +
+          "get the joy of marriage without the conflict that comes with it.",
+        "Three stages: the honeymoon, then disillusionment — when the " +
+          "illusion goes — then commitment, loving the person you actually " +
+          "married.",
+        "A marriage with no conflict is not necessarily healthy. Often it " +
+          "means one dominant person and one who has surrendered and gone " +
+          "underground.",
+        "Step one: do not react — not hot, and not cold either. Passive " +
+          "aggression, ten days of ice and everyone walking on eggshells, is " +
+          "as bad or worse.",
+        "Step two: respond to God. Your standard of conduct is not your " +
+          "mate's behaviour. Step three: let God change them — that is not " +
+          "your job, and trying makes you a manipulator.",
+      ],
+    },
+  },
+  {
+    id: "conflict-2",
+    number: "08",
+    title: "The Art of Conflict, Part 2",
+    range: "5:10 – 6:13",
+    start: [5, 10],
+    summary:
+      "She answers the daughters of Jerusalem by describing him head to foot. " +
+      "Where has he gone? He was in his garden the whole time. The " +
+      "restoration, and praise that comes back stronger than before.",
+    episode: {
+      title: "8. The Art of Conflict, Part 2",
+      url: "",
+      mainPoints: [
+        "The last two steps: talk, then forgive and forget.",
         "No woman brags about an angry husband. Nobody stands at a funeral " +
           "and praises the man for his temper.",
         "The four standing problems in a marriage are communication, money, " +
@@ -247,17 +286,6 @@ window.SECTIONS = [
           "through conflict — this one ends in a party.",
       ],
     },
-  },
-  {
-    id: "conflict-2",
-    number: "08",
-    title: "The Art of Conflict, Part 2",
-    range: "6:1 – 6:13", // CONFIRM — episode 7 already covers this ground
-    start: [6, 1],
-    summary:
-      "Where has he gone? He was in his garden the whole time. The restoration, " +
-      "and praise that comes back stronger than before.",
-    episode: { title: "", url: "", mainPoints: [] },
   },
   {
     id: "romance-1",
@@ -941,7 +969,7 @@ window.NOTES = [
     ],
     episode: "6. The Art of Intimacy, Part 2",
   },
-  // ---- 07. The Art of Conflict, Part 1 (5:10–6:13) -----------------------
+  // ---- 08. The Art of Conflict, Part 2 (5:10–6:13) -----------------------
   {
     ref: [5, 10],
     phrase: ["The best among ten thousand"],
@@ -952,7 +980,7 @@ window.NOTES = [
       "thousand, unique, the best there is. No woman ever bragged about her " +
       "husband's temper, and nobody stands at a graveside praising a man for " +
       "his anger.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [5, 12],
@@ -964,7 +992,7 @@ window.NOTES = [
       "the sockets of the tabernacle: set, fixed, immovable. His eyes never " +
       "narrow and never flare. She has watched them, and they do not change. " +
       "He is immutable in his kindness.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [5, 13],
@@ -974,7 +1002,7 @@ window.NOTES = [
       "His cheeks she wants to lay her head against. His lips drip myrrh — " +
       "kindness, tenderness, romance, apologies, forgiveness. That is what " +
       "comes out of him.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [5, 14],
@@ -985,7 +1013,7 @@ window.NOTES = [
       "arms where they have been gripped, then bruises on the face, then a " +
       "broken nose. And in Hebrew thought the belly is the seat of the " +
       "emotions — his are carved ivory, pure white.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [5, 16],
@@ -995,7 +1023,7 @@ window.NOTES = [
       "Hands, feet, body, cheeks, lips, words, hair, heart — every one of " +
       "them tender. Not a man who proved his strength by being unforgiving " +
       "and hard. She ends the list by calling him her friend.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [6, 2],
@@ -1012,7 +1040,7 @@ window.NOTES = [
         "worse, made in the name of the Trinity, and you do not take that " +
         "name in vain.",
     ],
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [6, 4],
@@ -1023,7 +1051,7 @@ window.NOTES = [
       "beautiful, and I respect you, and you are as lovely as I have ever " +
       "known you. Read on and 6:5–7 is word for word the language of the " +
       "honeymoon. He is telling her: I love you exactly as I always did.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [6, 9],
@@ -1033,7 +1061,7 @@ window.NOTES = [
       "Set against every other woman available to a king, she is the one. " +
       "Forgiveness that does not merely pardon but restores her to the only " +
       "place she ever held.",
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [6, 12],
@@ -1049,7 +1077,7 @@ window.NOTES = [
       "Clara Barton, asked about someone who had wronged her: “I distinctly " +
         "remember forgetting that.”",
     ],
-    episode: "7. The Art of Conflict, Part 1",
+    episode: "8. The Art of Conflict, Part 2",
   },
   {
     ref: [6, 13],
@@ -1061,6 +1089,102 @@ window.NOTES = [
       "companies: his and hers, dancing. The conflict has ended in a party. " +
       "Where sin increased, grace abounded — this is how a couple grows " +
       "close.",
+    episode: "8. The Art of Conflict, Part 2",
+  },
+  // ---- 07. The Art of Conflict, Part 1 (5:2–5:9) -------------------------
+  {
+    ref: [5, 2],
+    phrase: ["my head is filled with dew", "the dampness of the night"],
+    title: "He comes home wanting his wife",
+    body:
+      "In that culture they slept in separate rooms, and he is at her door. " +
+      "The dew in his hair says where he has been — out working, in a hard " +
+      "world, all day. He wants his wife: to be let in, to lock the door " +
+      "behind him, to talk in the dark. That is one of the good things about " +
+      "being a man.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 3],
+    phrase: ["must I put it on?", "must I soil them?"],
+    title: "“I have a headache”",
+    body:
+      "That is what this amounts to in Hebrew. I don't care how hard you " +
+      "worked or what you need — I am not getting out of bed. I matter more " +
+      "than you do. He has a real need and she will not open the door. Now " +
+      "there is a conflict.",
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 4],
+    phrase: ["thrust his hand in through the latch opening"],
+    title: "Step one — he does not react",
+    body:
+      "Watch what he does not do. He does not force the door and he does not " +
+      "throw her own words back. He puts his hand through the opening, and " +
+      "takes it out again. He is a king; she was a girl working a vineyard, " +
+      "self-conscious about her own body. Every card is in his hand and he " +
+      "plays none of them.",
+    points: [
+      "Never repay evil for evil. Joseph's answer to his brothers: am I in " +
+        "the place of God? It is not your job to mirror what was done to you.",
+      "Reacting feels righteous — as though you had weighed out good and " +
+        "evil and settled it. You have taken a prerogative that is God's.",
+      "Cold counts too. Ten days of ice with everyone walking on eggshells " +
+        "is as damaging as shouting, and often worse.",
+      "“A brother offended is harder to win than a strong city, and " +
+        "contentions are like the bars of a castle.” You cannot use your " +
+        "mate's forgiveness as a licence to wound them.",
+    ],
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 5],
+    phrase: ["my fingers with liquid myrrh", "on the handles of the lock"],
+    title: "Step two — he responds to God",
+    body:
+      "He left myrrh on the very bolt that was shut against him. In that " +
+      "culture it was a calling card — a valentine. Why do that for someone " +
+      "who has just refused you? Because his standard of conduct is not his " +
+      "wife's behaviour; it is God, who told him to love her.",
+    points: [
+      "“Being reviled, he did not revile in return; suffering, he uttered no " +
+        "threats, but entrusted himself to him who judges righteously.”",
+      "The quality is magnanimity — greatness of spirit. Its opposite is " +
+        "meanness, which is simply what is *mean*, average, what everyone " +
+        "else does.",
+      "Peter: live with your wife according to knowledge, as with a weaker " +
+        "vessel — not lesser, but porcelain. Men get close by insulting each " +
+        "other. Women are not built that way, and a wife wounds deeply.",
+    ],
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 7],
+    phrase: ["They beat me.", "took my cloak away from me"],
+    title: "Step three — let God change them",
+    body:
+      "Turn back to 3:3. She went looking for him then too, and the watchmen " +
+      "found her — and helped her. Same city, same watchmen, and this time " +
+      "they beat her and take her cloak. When she was in fellowship things " +
+      "ran her way; here they do not. He never had to correct her. Something " +
+      "else did.",
+    points: [
+      "There is no command anywhere to sanctify your mate. Teach her, love " +
+        "her, tell her what you feel — but you are not the Holy Spirit to her.",
+      "The moment you take that on you stop ministering and start " +
+        "manipulating: I will do this if you will do that.",
+    ],
+    episode: "7. The Art of Conflict, Part 1",
+  },
+  {
+    ref: [5, 8],
+    phrase: ["I am faint with love"],
+    title: "The same words, on the other side of it",
+    body:
+      "She said this in 2:5 in the first flush of wanting him. She says it " +
+      "again here, having shut him out and lost him. The desire never left; " +
+      "what changed is what it cost her to act on it late.",
     episode: "7. The Art of Conflict, Part 1",
   },
 ];
