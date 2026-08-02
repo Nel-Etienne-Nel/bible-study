@@ -108,7 +108,11 @@ handful of notes on the specific verses that got the most time.
 
 ## Reading the page
 
-- **Click a verse** with a coloured number to open its note.
+- On a wide screen (1140px and up) the notes sit in the **margins**, level
+  with their verse, alternating left and right. A note is nudged down when the
+  one above it in the same column would overlap.
+- On a narrow screen there is no margin to use, so notes stay in the text,
+  hidden until you **click a verse** with a coloured number.
 - **Show all notes** (bottom right) opens every note at once — useful for
   reading straight through, or for printing.
 - Printing hides the contents and the button and drops the background.

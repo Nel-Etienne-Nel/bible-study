@@ -130,6 +130,8 @@ body {
   max-width: var(--measure);
   margin: 0 auto;
   padding: 0 1.5rem clamp(5rem, 18vh, 10rem);
+  /* anchor for the notes once they move out into the margins */
+  position: relative;
 }
 
 /* Section opener */
@@ -355,6 +357,50 @@ mark {
   font-family: var(--sans);
   font-size: 0.72rem;
   color: var(--ink-faint);
+}
+
+/* Notes in the margins.
+   Wide screens only — JS adds .notes-margin and sets each note's top so it
+   sits level with its verse. Sides alternate to keep the columns even. */
+
+.notes-margin .note {
+  position: absolute;
+  width: 15.5rem;
+  margin: 0;
+  padding: 1.05rem 1.15rem;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule);
+}
+
+.notes-margin .note--left {
+  right: calc(100% - 1.5rem + 2.25rem);
+}
+
+.notes-margin .note--right {
+  left: calc(100% - 1.5rem + 2.25rem);
+}
+
+.notes-margin .note h4 {
+  font-size: 0.93rem;
+}
+
+.notes-margin .note p {
+  font-size: 0.83rem;
+  line-height: 1.62;
+}
+
+.notes-margin .note li {
+  font-size: 0.81rem;
+  line-height: 1.58;
+}
+
+.notes-margin .note .ref {
+  font-size: 0.58rem;
+}
+
+.notes-margin .note .source {
+  font-size: 0.68rem;
 }
 
 /* ------------------------------------------------------------------ chrome */
