@@ -155,6 +155,28 @@ are cached for an hour.
 If you edit the CSS or the renderer and don't see the change, that hour is
 why — hard-reload, or shorten the `max-age` in `_headers`.
 
+## A PDF version
+
+`tools/build_pdf.js` renders the whole study to a print-ready A4 PDF — 43
+pages, each episode starting on a fresh page.
+
+```sh
+npm i -D playwright-core
+node tools/build_pdf.js        # writes song-of-solomon-study.pdf
+```
+
+The page's own print stylesheet does the work, so **Ctrl/Cmd-P from the
+browser gives the same result** if you'd rather not install anything — just
+tick "Background graphics" so the highlights and note panels keep their
+colour.
+
+In print the margin layout is abandoned: absolute positioning cannot
+paginate, so each note drops back into the flow directly beneath its verse,
+and every note prints whether or not it was open on screen.
+
+The PDF is gitignored as generated output. Commit it if you'd rather people
+could download it straight from the repo.
+
 ## Reading the page
 
 - On a wide screen (1140px and up) the notes sit in the **margins**, level

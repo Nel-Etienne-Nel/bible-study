@@ -458,15 +458,133 @@ mark {
   }
 }
 
+/* ------------------------------------------------------------------- print
+
+   The margin layout is absolutely positioned, which cannot paginate. For
+   print the notes drop back into the flow directly beneath their verse, and
+   every note is shown whether or not it was open on screen. */
+
+@page {
+  size: A4;
+  margin: 18mm 15mm 20mm;
+}
+
 @media print {
-  .notes-toggle,
-  .contents {
-    display: none;
-  }
+  html,
   body {
     background: #fff;
+    font-size: 10.5pt;
   }
-  .note {
+
+  /* highlights and note panels are the point — keep their colour */
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .notes-toggle {
+    display: none;
+  }
+
+  /* JS may have left an inline min-height for the absolute note layer */
+  .scripture {
+    min-height: 0 !important;
+    max-width: none;
+    padding: 0;
+  }
+
+  .masthead {
+    padding: 6rem 0 0;
+    break-after: page;
+  }
+
+  .contents {
+    max-width: none;
+    padding: 0;
+    break-after: page;
+  }
+
+  .contents a {
+    padding: 0.5rem 0.2rem;
+  }
+
+  /* one episode per page */
+  .section-head {
+    break-before: page;
+    break-after: avoid;
+    margin: 0 0 1.6rem;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .section-head .summary,
+  .main-points {
     break-inside: avoid;
+  }
+
+  .chapter-mark {
+    break-after: avoid;
+    margin: 1.6rem 0 1rem;
+  }
+
+  .block {
+    margin-bottom: 1.1rem;
+  }
+
+  .line {
+    orphans: 2;
+    widows: 2;
+  }
+
+  /* undo the margin layout entirely */
+  .notes-margin .note,
+  .note {
+    position: static !important;
+    width: auto !important;
+    top: auto !important;
+    margin: 0.9rem 0 1.2rem 1.4rem;
+    padding: 0.75rem 0.9rem;
+    background: var(--paper-sunk);
+    border: 0;
+    border-left: 2px solid var(--accent);
+    /* A long note may split across a page — forbidding it strands a third of
+       a page in white. Keep the heading with its first lines instead. */
+    break-inside: auto;
+    orphans: 3;
+    widows: 3;
+  }
+
+  .note .ref,
+  .note h4 {
+    break-after: avoid;
+  }
+
+  .note li {
+    break-inside: avoid;
+  }
+
+  /* every note prints, however the page was left on screen */
+  .note[hidden] {
+    display: block !important;
+  }
+
+  .note h4 {
+    font-size: 1rem;
+  }
+
+  .note p,
+  .note li {
+    font-size: 0.92rem;
+  }
+
+  .colophon {
+    break-before: page;
+    padding-top: 4rem;
+    border-top: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
