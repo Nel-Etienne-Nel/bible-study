@@ -1,13 +1,18 @@
-# Cloudflare Pages config.
+# Cloudflare Workers config — a static site served as Worker assets.
 #
-# The site is static — no Workers, no functions, no runtime. `node build.js`
-# generates every page into dist/, which is all that gets published.
+# There is no Worker code: `node build.js` generates every page into dist/,
+# and Cloudflare serves that directory as-is. _headers is honoured.
 #
-#   node build.js && npx wrangler pages deploy
+# In the Cloudflare project settings (Settings → Build):
+#   Build command:   node build.js
+#   Deploy command:  npx wrangler deploy
 #
-# For the Git integration, set the build command to `node build.js` in the
-# Pages project settings; the output directory is read from here.
+# `name` must match the Worker's name in Cloudflare, or the deploy fails.
 
-name = "song-of-solomon-study"
-compatibility_date = "2026-08-02"
-pages_build_output_dir = "dist"
+name = "bible-study"
+compatibility_date = "2026-09-24"
+
+[assets]
+directory = "./dist"
+# /books/isaiah/ is served from books/isaiah/index.html
+html_handling = "auto-trailing-slash"

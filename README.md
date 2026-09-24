@@ -160,14 +160,23 @@ ordered here by content.
 
 ## Deploying to Cloudflare
 
+The site runs as a Cloudflare **Worker** named `bible-study`, serving `dist/`
+as static assets — there is no Worker code. In the project's
+**Settings → Build**:
+
+| Setting | Value |
+| --- | --- |
+| Build command | `node build.js` |
+| Deploy command | `npx wrangler deploy` |
+
+Every push to `main` then builds and deploys. To deploy by hand instead:
+
 ```sh
 node build.js
-npx wrangler pages deploy      # reads pages_build_output_dir from wrangler.toml
+npx wrangler deploy
 ```
 
-**Or from GitHub:** connect the repo in the Cloudflare dashboard with build
-command `node build.js` and output directory `dist`, and every push to `main`
-deploys itself.
+`name` in `wrangler.toml` must match the Worker's name in Cloudflare.
 
 Pages revalidate on every request. Scripts, styles and data are linked with
 a content hash (`?v=…`), so `_headers` caches them hard — a changed file
