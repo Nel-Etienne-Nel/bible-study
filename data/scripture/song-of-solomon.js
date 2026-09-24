@@ -2,8 +2,8 @@
 // World English Bible (public domain).
 window.SCRIPTURE = {
  "book": "Song of Solomon",
+ "slug": "song-of-solomon",
  "translation": "World English Bible",
- "translationNote": "Public domain. No permission needed to quote or reproduce.",
  "chapters": [
   {
    "n": 1,

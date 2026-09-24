@@ -1,80 +1,78 @@
-"""Convert the world-english-bible package's Song of Solomon JSON into a
-compact structure that preserves the poetic line layout.
+"""Convert one book from the world-english-bible package into the page's
+scripture format, keeping the poetic line layout.
+
+    npm pack world-english-bible && tar xzf world-english-bible-*.tgz
+    python3 tools/build_scripture.py package/json isaiah isaiah "Isaiah"
+    python3 tools/build_scripture.py package/json songofsolomon song-of-solomon "Song of Solomon"
+
+Arguments: the package's json/ directory, the package's file name for the
+book, the slug used in URLs, and the display name. Writes
+data/scripture/<slug>.js.
 
 Output shape:
-{
-  "book": ...,
-  "translation": ...,
-  "chapters": [
-    { "n": 1,
-      "blocks": [
-        { "kind": "poetry"|"prose",
-          "lines": [ [ {"v": 1, "t": "text"}, ... ], ... ] } ] } ]
-}
+  window.SCRIPTURE = { book, slug, translation, chapters: [
+    { n, blocks: [ { kind: "poetry"|"prose",
+                     lines: [ [ {v, t}, ... ], ... ] } ] } ] }
 
-A line is a list of segments so that a verse starting mid-line still gets its
-number rendered in the right place.
+A line is a list of segments so a verse starting mid-line still gets its
+number in the right place. The WEB is public domain.
 """
 import json
 import re
+import sys
 from pathlib import Path
 
-SRC = Path(__file__).parent / "package/json/songofsolomon.json"
-OUT = Path(__file__).parent / "scripture.json"
+if len(sys.argv) != 5:
+    sys.exit(__doc__)
 
-nodes = json.load(SRC.open())
+src_dir, source, slug, name = sys.argv[1:]
+nodes = json.loads((Path(src_dir) / f"{source}.json").read_text())
+out = Path(__file__).resolve().parent.parent / "data" / "scripture" / f"{slug}.js"
 
 chapters = {}
 block = None
 line = None
-kind = None
 
 
 def flush_line():
     global line
     if line:
-        # drop segments that are pure whitespace
-        cleaned = [s for s in line if s["t"].strip()]
+        cleaned = [seg for seg in line if seg["t"].strip()]
         if cleaned:
             block["lines"].append(cleaned)
     line = None
 
 
+def emit(chapter, kind, lines):
+    chapters.setdefault(chapter, []).append(
+        {"kind": kind, "lines": [[{"v": s["v"], "t": s["t"]} for s in ln] for ln in lines]}
+    )
+
+
 def flush_block():
-    """Emit the buffered block, splitting it wherever it crosses a chapter
-    boundary — stanzas in the source run straight through chapter breaks."""
+    """Emit the buffered block, split wherever it crosses a chapter boundary —
+    stanzas in the source run straight through chapter breaks."""
     global block
     flush_line()
     if block and block["lines"]:
-        run = []
-        run_chapter = None
+        run, run_chapter = [], None
         for ln in block["lines"]:
             ch = ln[0]["c"]
             if run_chapter is not None and ch != run_chapter:
-                emit(run_chapter, run)
+                emit(run_chapter, block["kind"], run)
                 run = []
             run_chapter = ch
             run.append(ln)
         if run:
-            emit(run_chapter, run)
+            emit(run_chapter, block["kind"], run)
     block = None
-
-
-def emit(chapter, lines):
-    chapters.setdefault(chapter, []).append(
-        {
-            "kind": block["kind"],
-            "lines": [[{"v": s["v"], "t": s["t"]} for s in ln] for ln in lines],
-        }
-    )
 
 
 for node in nodes:
     t = node["type"]
     if t in ("stanza start", "paragraph start"):
         flush_block()
-        kind = "poetry" if t == "stanza start" else "prose"
-        block = {"kind": kind, "lines": []}
+        block = {"kind": "poetry" if t == "stanza start" else "prose", "lines": []}
     elif t in ("stanza end", "paragraph end"):
         flush_block()
     elif t == "line break":
@@ -82,8 +80,7 @@ for node in nodes:
     elif t in ("line text", "paragraph text"):
         if block is None:
             block = {"kind": "poetry", "lines": []}
-        ch = node["chapterNumber"]
-        v = node["verseNumber"]
+        ch, v = node["chapterNumber"], node["verseNumber"]
         text = re.sub(r"\s+", " ", node["value"]).strip()
         if line is None:
             line = []
@@ -94,23 +91,23 @@ for node in nodes:
 
 flush_block()
 
-data = {
-    "book": "Song of Solomon",
-    "translation": "World English Bible",
-    "translationNote": "Public domain. No permission needed to quote or reproduce.",
-    "chapters": [
-        {"n": n, "blocks": chapters[n]} for n in sorted(chapters)
-    ],
-}
-
-# sanity check: every verse 1..max present, exactly 117 verses
-expected = {1: 17, 2: 17, 3: 11, 4: 16, 5: 16, 6: 13, 7: 13, 8: 14}
+# every chapter must run 1..n with no gaps
 total = 0
-for chap in data["chapters"]:
-    found = sorted({seg["v"] for b in chap["blocks"] for ln in b["lines"] for seg in ln})
-    assert found == list(range(1, expected[chap["n"]] + 1)), (chap["n"], found)
+for n in sorted(chapters):
+    found = sorted({s["v"] for b in chapters[n] for ln in b["lines"] for s in ln})
+    assert found == list(range(1, found[-1] + 1)), f"{name} {n}: gap in {found}"
     total += len(found)
-assert total == 117, total
 
-OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n")
-print(f"wrote {OUT} — {total} verses, {len(data['chapters'])} chapters")
+data = {
+    "book": name,
+    "slug": slug,
+    "translation": "World English Bible",
+    "chapters": [{"n": n, "blocks": chapters[n]} for n in sorted(chapters)],
+}
+out.parent.mkdir(parents=True, exist_ok=True)
+out.write_text(
+    "// Generated by tools/build_scripture.py - do not edit by hand.\n"
+    "// World English Bible (public domain).\n"
+    "window.SCRIPTURE = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n"
+)
+print(f"wrote {out.relative_to(out.parent.parent.parent)} — {len(chapters)} chapters, {total} verses")

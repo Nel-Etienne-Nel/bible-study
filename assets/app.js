@@ -1,6 +1,11 @@
-/* Renders the book from data/scripture.js, weaving in the sections and notes
-   from data/study.js. Nothing here needs editing to add study material — put
-   it in data/study.js and it shows up. */
+/* Renders one book's scripture, weaving in a study's lessons and notes when
+   the page has them. Used by every reading page on the site:
+
+     a book page     — SCRIPTURE only
+     a series page   — SCRIPTURE + SECTIONS + NOTES, the whole book
+     a lesson page   — the same, limited to PAGE.range
+
+   Nothing here needs editing to add study material. */
 
 (function () {
   "use strict";
@@ -12,6 +17,11 @@
     return a.start[0] - b.start[0] || a.start[1] - b.start[1];
   });
   var notes = window.NOTES || [];
+
+  // Set inline by the generated page. `range` limits a lesson page to its
+  // verses: `from` inclusive, `until` exclusive (null runs to the end).
+  // `lessonHref` maps a section id to its own lesson page.
+  var page = window.PAGE || {};
 
   // Populated during render: each note panel and the verse it belongs beside.
   var panels = [];
@@ -37,6 +47,16 @@
   });
 
   /* -------------------------------------------------------------- helpers */
+
+  function compare(c, v, ref) {
+    return c - ref[0] || v - ref[1];
+  }
+
+  function inRange(c, v) {
+    var r = page.range;
+    if (!r) return true;
+    return compare(c, v, r.from) >= 0 && (!r.until || compare(c, v, r.until) < 0);
+  }
 
   function el(tag, className, text) {
     var node = document.createElement(tag);
@@ -122,6 +142,13 @@
     }
     var points = renderMainPoints(section);
     if (points) head.appendChild(points);
+
+    var href = page.lessonHref && page.lessonHref[section.id];
+    if (href) {
+      var a = el("a", "lesson-link", "Open this lesson on its own →");
+      a.href = href;
+      head.appendChild(a);
+    }
     return head;
   }
 
@@ -133,7 +160,7 @@
     panel.hidden = true;
 
     panel.appendChild(
-      el("span", "ref", "Song of Solomon " + note.ref[0] + ":" + note.ref[1])
+      el("span", "ref", scripture.book + " " + note.ref[0] + ":" + note.ref[1])
     );
     if (note.title) panel.appendChild(el("h4", null, note.title));
     if (note.body) panel.appendChild(el("p", null, note.body));
@@ -167,6 +194,7 @@
           var lineEl = el("p", "line");
 
           line.forEach(function (seg) {
+            if (!inRange(chapter.n, seg.v)) return;
             var key = chapter.n + ":" + seg.v;
             var section = sectionAt[key];
 
@@ -183,6 +211,7 @@
             if (!chapterMarked) {
               chapterMarked = true;
               var mark = el("div", "chapter-mark", "Chapter " + chapter.n);
+              mark.id = "chapter-" + chapter.n;
               if (blockEl.childNodes.length) {
                 root.appendChild(blockEl);
                 blockEl = el("div", "block " + block.kind);
@@ -223,7 +252,8 @@
             lineEl.appendChild(span);
           });
 
-          blockEl.appendChild(lineEl);
+          // Lines wholly outside a lesson's range come out empty.
+          if (lineEl.childNodes.length) blockEl.appendChild(lineEl);
         });
 
         if (blockEl.childNodes.length) root.appendChild(blockEl);
