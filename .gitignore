@@ -1,3 +1,5 @@
 dist/
 pdf/
 node_modules/
+package/
+world-english-bible-*.tgz

@@ -81,6 +81,9 @@ const teachers = fs
         index: i,
         from: sec.start,
         until: sections[i + 1] ? sections[i + 1].start : null,
+        // a lesson's optional `end` stops it short of the next one — needed
+        // for the latest lesson while a series is still being added
+        to: sec.end || null,
       }));
       book.series.push(series);
       return series;
@@ -415,7 +418,7 @@ for (const t of teachers) {
           scripts: [
             `data/scripture/${s.book.slug}.js`,
             studyScript,
-            { inline: `window.PAGE = ${JSON.stringify({ range: { from: l.from, until: l.until } })};` },
+            { inline: `window.PAGE = ${JSON.stringify({ range: { from: l.from, until: l.until, to: l.to } })};` },
             "assets/app.js",
           ],
         })

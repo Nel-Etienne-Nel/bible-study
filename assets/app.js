@@ -19,7 +19,8 @@
   var notes = window.NOTES || [];
 
   // Set inline by the generated page. `range` limits a lesson page to its
-  // verses: `from` inclusive, `until` exclusive (null runs to the end).
+  // verses: `from` inclusive, `until` exclusive (the next lesson's start),
+  // and `to` inclusive (the lesson's own `end`, if it has one).
   // `lessonHref` maps a section id to its own lesson page.
   var page = window.PAGE || {};
 
@@ -55,7 +56,11 @@
   function inRange(c, v) {
     var r = page.range;
     if (!r) return true;
-    return compare(c, v, r.from) >= 0 && (!r.until || compare(c, v, r.until) < 0);
+    return (
+      compare(c, v, r.from) >= 0 &&
+      (!r.until || compare(c, v, r.until) < 0) &&
+      (!r.to || compare(c, v, r.to) <= 0)
+    );
   }
 
   function el(tag, className, text) {

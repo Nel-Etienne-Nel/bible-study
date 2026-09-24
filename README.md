@@ -111,6 +111,7 @@ the teacher's page.
   title: "The Art of Courtship, Part 1",
   range: "2:8 – 2:14",    // display only
   start: [2, 8],          // [chapter, verse]
+  end: [2, 14],           // optional — see below
   summary: "…",           // italic paragraph under the title
   episode: {
     title: "3. The Art of Courtship, Part 1",
@@ -120,7 +121,9 @@ the teacher's page.
 }
 ```
 
-Lessons sort themselves by `start`, so file order doesn't matter. A lesson's
+Lessons sort themselves by `start`, so file order doesn't matter. The latest
+lesson runs to the end of the book unless it has an `end`, so give it one
+while a series is still being added. A lesson's
 URL comes from its number and title, so renaming one changes its address.
 
 ### Notes
