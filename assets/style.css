@@ -297,6 +297,17 @@ section.index + .index {
   font-style: italic;
 }
 
+/* a book's own introduction, above its text */
+
+.intro p {
+  margin: 0 0 0.9rem;
+  line-height: 1.75;
+}
+
+.intro p:last-child {
+  margin-bottom: 0;
+}
+
 /* chapter jump list on a book page */
 
 .chapters ol {

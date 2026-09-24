@@ -1,7 +1,8 @@
-/* Check a study's lessons and notes against the text, before building.
+/* Check lessons and notes against the text, before building.
  *
- *   node tools/check_study.js                          # every study
+ *   node tools/check_study.js                          # everything
  *   node tools/check_study.js tommy-nelson/song-of-solomon
+ *   node tools/check_study.js notes/isaiah             # a book's own notes
  *
  * Errors (exit 1) — things that would silently break on the page:
  *   - a lesson or note pointing at a verse the book does not have
@@ -42,32 +43,57 @@ function phrasePattern(phrase) {
 }
 
 const only = process.argv[2];
-const studiesDir = path.join(ROOT, "data", "studies");
 const targets = [];
-for (const teacher of fs.readdirSync(studiesDir)) {
+
+// a teacher's series: data/studies/<teacher>/<series>.js
+const studiesDir = path.join(ROOT, "data", "studies");
+for (const teacher of fs.existsSync(studiesDir) ? fs.readdirSync(studiesDir) : []) {
   for (const f of fs.readdirSync(path.join(studiesDir, teacher))) {
     if (!f.endsWith(".js")) continue;
     const id = `${teacher}/${f.replace(/\.js$/, "")}`;
-    if (!only || only === id) targets.push({ id, teacher, file: path.join(studiesDir, teacher, f) });
+    if (!only || only === id) targets.push({ id, kind: "study", teacher, file: path.join(studiesDir, teacher, f) });
   }
 }
+
+// a book's own notes: data/notes/<book>.js — sections here are headers on
+// the book page, not lessons with pages of their own
+const notesDir = path.join(ROOT, "data", "notes");
+for (const f of fs.existsSync(notesDir) ? fs.readdirSync(notesDir) : []) {
+  if (!f.endsWith(".js")) continue;
+  const slug = f.replace(/\.js$/, "");
+  const id = `notes/${slug}`;
+  if (!only || only === id) targets.push({ id, kind: "notes", bookSlug: slug, file: path.join(notesDir, f) });
+}
+
 if (!targets.length) {
-  console.error(only ? `no study "${only}" under data/studies/` : "no studies found");
+  console.error(only ? `nothing called "${only}" under data/studies/ or data/notes/` : "nothing to check");
   process.exit(1);
 }
 
 let errors = 0;
 for (const t of targets) {
-  // which book? the teacher file says, via the series slug
-  const teacher = require(path.join(ROOT, "data", "teachers", t.teacher + ".js"));
-  const seriesSlug = path.basename(t.file, ".js");
-  const series = (teacher.series || []).find((s) => (s.slug || s.book) === seriesSlug);
-  if (!series) {
-    console.log(`\n✗ ${t.id}: not listed in data/teachers/${t.teacher}.js`);
+  // which book? a study's teacher file says, via the series slug; a book's
+  // notes are named after the book
+  let bookSlug = t.bookSlug;
+  if (t.kind === "study") {
+    const teacher = require(path.join(ROOT, "data", "teachers", t.teacher + ".js"));
+    const seriesSlug = path.basename(t.file, ".js");
+    const series = (teacher.series || []).find((s) => (s.slug || s.book) === seriesSlug);
+    if (!series) {
+      console.log(`\n✗ ${t.id}: not listed in data/teachers/${t.teacher}.js`);
+      errors++;
+      continue;
+    }
+    bookSlug = series.book;
+  }
+  const scriptureFile = path.join(ROOT, "data", "scripture", bookSlug + ".js");
+  if (!fs.existsSync(scriptureFile)) {
+    console.log(`\n✗ ${t.id}: no scripture for "${bookSlug}" — run tools/build_scripture.py`);
     errors++;
     continue;
   }
-  const book = load(path.join(ROOT, "data", "scripture", series.book + ".js")).SCRIPTURE;
+  const book = load(scriptureFile).SCRIPTURE;
+  const isStudy = t.kind === "study";
   const study = load(t.file);
   const sections = (study.SECTIONS || []).slice().sort((a, b) => a.start[0] - b.start[0] || a.start[1] - b.start[1]);
   const notes = study.NOTES || [];
@@ -88,7 +114,7 @@ for (const t of targets) {
     if (!rows[where(s.start)]) problems.push(`lesson ${s.number} "${s.title}" starts at ${where(s.start)}, which ${book.book} does not have`);
     if (starts.has(where(s.start))) problems.push(`two lessons start at ${where(s.start)}`);
     starts.add(where(s.start));
-    if (!s.episode || !(s.episode.mainPoints || []).length) warnings.push(`lesson ${s.number} has no main points`);
+    if (isStudy && (!s.episode || !(s.episode.mainPoints || []).length)) warnings.push(`lesson ${s.number} has no main points`);
   }
 
   const lessonOf = (c, v) => {
@@ -106,8 +132,9 @@ for (const t of targets) {
       continue;
     }
     const lesson = lessonOf(n.ref[0], n.ref[1]);
-    if (!lesson) warnings.push(`note "${n.title}" (${key}) comes before the first lesson`);
-    else perLesson.set(lesson, perLesson.get(lesson) + 1);
+    if (!lesson) {
+      if (isStudy) warnings.push(`note "${n.title}" (${key}) comes before the first lesson`);
+    } else perLesson.set(lesson, perLesson.get(lesson) + 1);
 
     const lit = new Set();
     for (const ph of [].concat(n.phrase || [])) {
@@ -129,14 +156,14 @@ for (const t of targets) {
     if (rows[key].length >= 3 && lit.size === rows[key].length)
       warnings.push(`${key} "${n.title}" highlights every line of the verse — pick the words that carry the point`);
   }
-  for (const [s, count] of perLesson) if (!count) warnings.push(`lesson ${s.number} has no notes yet`);
+  if (isStudy) for (const [s, count] of perLesson) if (!count) warnings.push(`lesson ${s.number} has no notes yet`);
 
   // The last lesson runs to the end of the book unless it has an `end`.
   // While a series is still going in, that is usually not what its range says.
   const keys = Object.keys(rows);
   const lastVerse = keys[keys.length - 1];
   const last = sections[sections.length - 1];
-  if (last && !last.end) {
+  if (isStudy && last && !last.end) {
     const m = String(last.range || "").match(/(\d+):(\d+)\s*$/);
     if (m && `${m[1]}:${m[2]}` !== lastVerse)
       warnings.push(
@@ -157,8 +184,10 @@ for (const t of targets) {
       return afterStart && beforeNext && beforeEnd;
     }).length;
   };
-  console.log(`\n${problems.length ? "✗" : "✓"} ${t.id} — ${book.book}: ${sections.length} lessons, ${notes.length} notes, ${phrases} phrases`);
-  sections.forEach((s, i) => {
+  const unit = isStudy ? "lessons" : "sections";
+  console.log(`\n${problems.length ? "✗" : "✓"} ${t.id} — ${book.book}: ${sections.length} ${unit}, ${notes.length} notes, ${phrases} phrases`);
+  // a book's last section runs on to the end of the book; its count means little
+  if (isStudy) sections.forEach((s, i) => {
     console.log(
       `   ${String(s.number || i + 1).padStart(2)}  ${s.title.padEnd(34).slice(0, 34)} ${String(s.range || "").padEnd(14)}` +
         ` ${String(verseCount(s, i)).padStart(3)} verses  ${String(perLesson.get(s)).padStart(2)} notes`

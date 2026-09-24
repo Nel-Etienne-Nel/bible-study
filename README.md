@@ -32,6 +32,7 @@ data/books.js                              which books appear, in order
 data/scripture/<book>.js                   the text — generated, don't edit
 data/teachers/<teacher>.js                 a teacher, their bio and series
 data/studies/<teacher>/<series>.js         a series' lessons and notes  ← you edit these
+data/notes/<book>.js                       your own notes on a book (optional)
 
 assets/app.js       renders a reading page: the text, lessons and notes
 assets/style.css    the look, including print
@@ -92,6 +93,14 @@ A **series** is one teacher's teaching through one book.
 
 Run `node build.js`. It stops with a clear message if anything is missing or
 doesn't line up.
+
+## Your own notes on a book
+
+A book can carry notes of its own, separate from any teacher, in
+`data/notes/<book>.js`. They appear in the margins of the book's page. The
+format is a study's — `SECTIONS` become headers above a passage (usually a
+chapter), `NOTES` pin to verses — plus an optional `INTRO` shown above the
+text. See `data/notes/isaiah.js`.
 
 ## Lessons and notes
 

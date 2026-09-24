@@ -8,6 +8,7 @@
  *   data/teachers/<teacher>.js          a teacher and their series
  *   data/studies/<teacher>/<series>.js  a series' lessons and notes
  *   data/scripture/<book>.js            the text, generated per book
+ *   data/notes/<book>.js                optional notes on the book itself
  *
  * Writes one page per book, teacher, series and lesson, plus the indexes.
  * No dependencies beyond Node itself.
@@ -45,7 +46,15 @@ const books = require("./data/books.js").map((b) => {
   const file = path.join(ROOT, "data/scripture", b.slug + ".js");
   if (!fs.existsSync(file)) fail(`no scripture for ${b.name} — run tools/build_scripture.py`);
   const scripture = loadBrowserData(file).SCRIPTURE;
-  return { ...b, scripture, series: [] };
+  // A book can carry its own notes, separate from any teacher's series —
+  // same format as a study, plus an optional INTRO shown above the text.
+  const notesFile = path.join(ROOT, "data/notes", b.slug + ".js");
+  let notes = null;
+  if (fs.existsSync(notesFile)) {
+    const n = loadBrowserData(notesFile);
+    notes = { intro: n.INTRO || null, count: (n.NOTES || []).length };
+  }
+  return { ...b, scripture, notes, series: [] };
 });
 const bookBySlug = Object.fromEntries(books.map((b) => [b.slug, b]));
 
@@ -223,6 +232,9 @@ const crumb = {
 const pages = [];
 const page = (url, html) => pages.push({ url, html });
 
+const bookLabel = (b) =>
+  b.series.length ? plural(b.series.length, "teaching") : b.notes ? "Notes" : "Text";
+
 const lessonCount = (t) => t.series.reduce((n, s) => n + s.lessons.length, 0);
 
 page(
@@ -240,7 +252,7 @@ page(
           books.map((b) => ({
             href: urls.book(b),
             name: b.name,
-            ref: b.series.length ? plural(b.series.length, "teaching") : "Text",
+            ref: bookLabel(b),
           }))
         )}
       </section>
@@ -272,7 +284,7 @@ page(
           href: urls.book(b),
           name: b.name,
           sub: `${b.testament} Testament · ${plural(b.scripture.chapters.length, "chapter")}`,
-          ref: b.series.length ? plural(b.series.length, "teaching") : "Text",
+          ref: bookLabel(b),
         }))
       )}
     </main>`,
@@ -290,12 +302,20 @@ for (const b of books) {
       description: `The book of ${b.name}, and the teachings on it.`,
       crumbs: [crumb.home, crumb.books, { label: b.name }],
       body: `${masthead(`${b.testament} Testament`, b.name, "World English Bible")}
+    ${
+      b.notes && b.notes.intro
+        ? `<section class="index intro">
+      <h2 class="index-head">${esc(b.notes.intro.title || "Introduction")}</h2>
+      ${[].concat(b.notes.intro.body || []).map((para) => `<p>${esc(para)}</p>`).join("\n      ")}
+    </section>`
+        : ""
+    }
     <section class="index">
       <h2 class="index-head">Teachings</h2>
       ${
         b.series.length
           ? listing(seriesRows(b.series, { byTeacher: true }))
-          : `<p class="empty">No teachings on ${esc(b.name)} yet. The text is here to read on its own.</p>`
+          : `<p class="empty">No teachings on ${esc(b.name)} yet.${b.notes ? "" : " The text is here to read on its own."}</p>`
       }
     </section>
     ${
@@ -306,8 +326,14 @@ for (const b of books) {
     </nav>`
         : ""
     }
-    <main class="scripture" id="scripture"></main>`,
-      scripts: [`data/scripture/${b.slug}.js`, "assets/app.js"],
+    <main class="scripture" id="scripture"></main>${
+      b.notes ? `\n    <button class="notes-toggle" id="notes-toggle" type="button">Show all notes</button>` : ""
+    }`,
+      scripts: [
+        `data/scripture/${b.slug}.js`,
+        ...(b.notes ? [`data/notes/${b.slug}.js`] : []),
+        "assets/app.js",
+      ],
     })
   );
 }
@@ -437,8 +463,9 @@ for (const p of pages) {
   fs.writeFileSync(file, p.html);
 }
 
-for (const dir of ["assets", "data/scripture", "data/studies"]) {
-  fs.cpSync(path.join(ROOT, dir), path.join(OUT, dir), { recursive: true });
+for (const dir of ["assets", "data/scripture", "data/studies", "data/notes"]) {
+  if (fs.existsSync(path.join(ROOT, dir)))
+    fs.cpSync(path.join(ROOT, dir), path.join(OUT, dir), { recursive: true });
 }
 fs.copyFileSync(path.join(ROOT, "_headers"), path.join(OUT, "_headers"));
 

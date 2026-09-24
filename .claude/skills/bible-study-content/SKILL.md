@@ -15,6 +15,7 @@ data/books.js                        which books appear, in canonical order
 data/scripture/<book>.js             the text — generated, never edit by hand
 data/teachers/<teacher>.js           a teacher, their bio and series list
 data/studies/<teacher>/<series>.js   a series: SECTIONS (lessons) + NOTES
+data/notes/<book>.js                 the owner's own notes on a book
 ```
 
 ## Pick the job
@@ -24,6 +25,7 @@ data/studies/<teacher>/<series>.js   a series: SECTIONS (lessons) + NOTES
 | pastes a transcript, or says "ep N" / "next episode" | `references/transcript.md` |
 | wants a new book of the Bible on the site | `references/new-book.md` |
 | wants a new teacher, or a teacher's series on another book | `references/new-teacher.md` |
+| gives their **own** notes on a book, not a teacher's | `references/book-notes.md` |
 | wants a note, highlight or range changed | the relevant section of `references/transcript.md`, then publish |
 
 A transcript for a teacher or book that isn't on the site yet needs the
