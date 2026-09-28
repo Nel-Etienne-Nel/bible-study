@@ -56,6 +56,25 @@ window.SECTIONS = [
       ],
     },
   },
+  {
+    id: "chapter-3-supports",
+    title: "Chapter 3: The Day of the LORD gets concrete",
+    range: "3:1 – 4:1",
+    start: [3, 1],
+    summary:
+      "Chapter 2 ended with “stop regarding man, in whose nostrils is " +
+      "breath” (2:22). Chapter 3 opens with “For behold…” and shows what " +
+      "happens when God removes everything people have been leaning on. The " +
+      "unit actually runs to 4:1, and chapter 4 (vv. 2–6) answers it.",
+    episode: {
+      mainPoints: [
+        "The reading key: chapters 2–3 move from the general to the " +
+          "specific. Chapter 2 says God will humble everything lofty. " +
+          "Chapter 3 names it: the leaders who fed on the poor, and the " +
+          "proud luxury that was the fruit of it.",
+      ],
+    },
+  },
 ];
 
 window.NOTES = [
@@ -258,5 +277,197 @@ window.NOTES = [
     body:
       "The chapter closes bluntly: stop trusting in man, “in whose nostrils " +
       "is breath.”",
+  },
+
+  // ---- Chapter 3 – 4:2 ---------------------------------------------------
+
+  {
+    ref: [3, 1],
+    phrase: ["supply and support"],
+    title: "God pulls out the supports",
+    body:
+      "“The Lord GOD of hosts is taking away from Jerusalem and from Judah " +
+      "support and supply.” The Hebrew pairs the masculine and feminine " +
+      "forms of the same word (mash’en u-mash’enah), an idiom for every kind " +
+      "of prop. Then comes the list (vv. 1–3):",
+    points: [
+      "Bread and water",
+      "Soldiers and judges",
+      "Prophets and elders",
+      "Counselors and skilled craftsmen",
+      "Diviners and charm-experts, which shows how mixed their religion had " +
+        "become",
+    ],
+  },
+  {
+    ref: [3, 4],
+    phrase: ["I will give boys to be their princes"],
+    title: "What’s left is chaos",
+    body:
+      "Boys and capricious people rule (v. 4), and society turns on itself " +
+      "(v. 5). The young sneer at the old, and the nobody sneers at the " +
+      "honoured.",
+  },
+  {
+    ref: [3, 7],
+    phrase: ["I will not be a healer"],
+    title: "No one will bind the wounds",
+    body:
+      "Verses 6–7 are almost darkly comic. A man grabs his brother and says, " +
+      "“You have a cloak, you be our leader.” The brother refuses: “I will " +
+      "not be a healer.” The word is chovesh, “one who binds up wounds.” " +
+      "That ties back to 1:6, where the nation’s wounds were “not bound up.” " +
+      "Jerusalem is covered in wounds, and no one is willing or able to bind " +
+      "them.",
+  },
+  {
+    ref: [3, 7],
+    title: "The one who will bind up",
+    body:
+      "In 3:7 no one will be a chovesh, a binder of wounds. In 61:1, the " +
+      "anointed one says he is sent “to bind up (chavash) the " +
+      "brokenhearted.” In Luke 4, Jesus reads that passage and says, “Today " +
+      "this Scripture has been fulfilled.” Isaiah deliberately leaves the " +
+      "healer’s role empty, and Christ fills it.",
+    episode: CHRIST,
+  },
+  {
+    ref: [3, 8],
+    phrase: ["to provoke the eyes of his glory"],
+    title: "Why: defying his presence",
+    body:
+      "Jerusalem has stumbled because its words and deeds defy God’s " +
+      "glorious presence.",
+  },
+  {
+    ref: [3, 9],
+    phrase: ["They parade their sin like Sodom", "They don’t hide it."],
+    title: "Like Sodom",
+    body:
+      "Like Sodom, they sin openly without even hiding it, which echoes 1:10.",
+  },
+  {
+    ref: [3, 10],
+    phrase: ["Tell the righteous"],
+    title: "The judgment isn’t indiscriminate",
+    body:
+      "In the middle of the judgment comes a two-line wisdom saying: it will " +
+      "go well with the righteous, and woe to the wicked (vv. 10–11). The " +
+      "judgment isn’t indiscriminate.",
+  },
+  {
+    ref: [3, 12],
+    phrase: ["those who lead you cause you to err", "women rule over them"],
+    title: "“Your guides mislead you”",
+    body:
+      "A small textual note: “women rule over them” may instead read " +
+      "“creditors rule over them.” The Hebrew consonants allow both, and the " +
+      "Septuagint takes the second. Either way, the point is misrule.",
+  },
+  {
+    ref: [3, 13],
+    phrase: ["Yahweh stands up to contend"],
+    title: "The courtroom again",
+    body:
+      "The LORD stands up to “contend” (rîv, the same lawsuit language as " +
+      "ch. 1). Verses 13–15 are the heart of the chapter.",
+  },
+  {
+    ref: [3, 14],
+    phrase: ["It is you who have eaten up the vineyard", "The plunder of the poor is in your houses"],
+    title: "Straight to the elders and princes",
+    body:
+      "He goes straight to the elders and princes: “It is you who have " +
+      "devoured the vineyard; the spoil of the poor is in your houses. What " +
+      "do you mean by crushing my people, by grinding the face of the poor?” " +
+      "(vv. 14–15).",
+    points: ["The vineyard image sets up the Song of the Vineyard in chapter 5."],
+  },
+  {
+    ref: [3, 14],
+    title: "The vineyard and its tenants",
+    body:
+      "“You have devoured the vineyard” (3:14) grows into Isaiah 5. Jesus " +
+      "picks it up in the parable of the wicked tenants (Matthew 21:33–45), " +
+      "with himself as the Son the tenants kill. Isaiah’s charge against " +
+      "Jerusalem’s leaders reaches its climax at the cross.",
+    episode: CHRIST,
+  },
+  {
+    ref: [3, 16],
+    phrase: ["the daughters of Zion are arrogant", "outstretched necks and flirting eyes"],
+    title: "The daughters of Zion",
+    body:
+      "This section is easy to misread as a rant about women’s jewellery. " +
+      "Watch the placement: it comes immediately after “the spoil of the " +
+      "poor is in your houses.” The finery of Jerusalem’s elite households " +
+      "was bought with the ground-down faces of the poor.",
+    points: [
+      "They are “haughty” (gavah), the same root as the “haughty looks of " +
+        "man” that the LORD brings low in 2:11, 17. They are the city’s " +
+        "pride on display, walking with outstretched necks, flirting eyes, " +
+        "and tinkling ankles.",
+    ],
+  },
+  {
+    ref: [3, 18],
+    phrase: ["the beauty of their anklets"],
+    title: "A customs manifest",
+    body:
+      "An inventory of 21 luxury items (vv. 18–23): anklets, headbands, " +
+      "crescents, perfume boxes, amulets, signet rings, nose rings, festal " +
+      "robes, mirrors, turbans and veils. It reads like a customs manifest of " +
+      "the city’s wealth.",
+  },
+  {
+    ref: [3, 24],
+    phrase: ["there shall be rottenness", "branding instead of beauty"],
+    title: "The reversal",
+    body: "A line-by-line reversal. Instead of — there will be:",
+    points: [
+      "Perfume — rottenness",
+      "A sash — a rope",
+      "Well-set hair — baldness",
+      "A rich robe — sackcloth",
+      "Beauty — branding",
+    ],
+  },
+  {
+    ref: [3, 24],
+    title: "Stripped garments",
+    body:
+      "Jerusalem’s pride is stripped away in shame. In 61:10 God clothes his " +
+      "people with “garments of salvation” and “the robe of righteousness.” " +
+      "Between the two stands the one who was himself stripped (John " +
+      "19:23–24), so that the proud and ashamed could be clothed.",
+    episode: CHRIST,
+  },
+  {
+    ref: [3, 26],
+    phrase: ["sit on the ground"],
+    title: "Stripped on the ground",
+    body:
+      "The men fall in war (v. 25), and the city sits stripped on the ground " +
+      "(v. 26).",
+  },
+  {
+    ref: [4, 1],
+    phrase: ["Seven women shall take hold of one man"],
+    title: "Seven women, one man",
+    body:
+      "Seven women grab hold of one surviving man, begging just to bear his " +
+      "name so their disgrace is removed.",
+  },
+  {
+    ref: [4, 2],
+    phrase: ["Yahweh’s branch will be beautiful and glorious"],
+    title: "The Branch right after the rubble",
+    body:
+      "The very next verse after 4:1 is “In that day the Branch (tsemach) of " +
+      "the LORD shall be beautiful and glorious.” The beauty and glory the " +
+      "proud city lost are given back in a Person. It’s the same Branch as in " +
+      "Zechariah 3:8 and 6:12 and Jeremiah 23:5. In Zechariah 3, it comes " +
+      "right after Joshua’s filthy garments are removed.",
+    episode: CHRIST,
   },
 ];
