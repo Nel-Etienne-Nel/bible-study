@@ -75,6 +75,28 @@ window.SECTIONS = [
       ],
     },
   },
+  {
+    id: "chapter-4-hope-again",
+    title: "Chapter 4:2–6: Hope again",
+    range: "4:2 – 4:6",
+    start: [4, 2],
+    summary:
+      "Only five verses, but it closes a unit that began in 2:1. Chapters " +
+      "2–4 are one piece, with the judgment framed by promise on both " +
+      "sides. Many of the words in 4:2–6 are deliberately picked up from " +
+      "chapters 1–3 and turned around.",
+    episode: {
+      mainPoints: [
+        "2:2–5: hope (the nations stream to Zion)",
+        "2:6–4:1: judgment (pride brought low, the city stripped)",
+        "4:2–6: hope again (Zion cleansed and covered by God’s glory)",
+        "The shape of chapters 1–4 in one line: the call was “wash " +
+          "yourselves” (1:16); the answer is “the Lord shall have washed” " +
+          "(4:4). Everything in between shows why the first couldn’t work " +
+          "and why only the second could.",
+      ],
+    },
+  },
 ];
 
 window.NOTES = [
@@ -468,6 +490,137 @@ window.NOTES = [
       "proud city lost are given back in a Person. It’s the same Branch as in " +
       "Zechariah 3:8 and 6:12 and Jeremiah 23:5. In Zechariah 3, it comes " +
       "right after Joshua’s filthy garments are removed.",
+    points: [
+      "Isaiah’s thread continues with the shoot from Jesse’s stump (11:1) " +
+        "and the root out of dry ground (53:2).",
+    ],
+    episode: CHRIST,
+  },
+
+  // ---- Chapter 4:2–6 -----------------------------------------------------
+
+  {
+    ref: [4, 2],
+    phrase: ["the fruit of the land"],
+    title: "What is the “Branch”?",
+    body:
+      "“In that day the branch of the LORD shall be beautiful and glorious, " +
+      "and the fruit of the land shall be the pride and honour of the " +
+      "survivors of Israel.” Tsemach can simply mean growth or vegetation, " +
+      "and many scholars read this as the land flourishing again after " +
+      "devastation. But the early Aramaic Targum already rendered it “the " +
+      "Messiah of the LORD.” Jeremiah (23:5; 33:15) and Zechariah (3:8; " +
+      "6:12) use tsemach as a title for the coming Davidic king.",
+    points: [
+      "Notice the parallel: the Branch of the LORD // the fruit of the land. " +
+        "One origin is from God and one from the earth. Many Christian " +
+        "readers have seen a hint of the one who is both divine and human " +
+        "here. That is a reading rather than something the verse spells " +
+        "out, but it isn’t forced.",
+    ],
+  },
+  {
+    ref: [4, 2],
+    title: "Glory handed back",
+    body:
+      "The word for “honour” is tif’eret. It’s the same word used in 3:18, " +
+      "where the Lord takes away the “finery” of the daughters of Zion. The " +
+      "beauty that was stripped from the proud city is given back, but now " +
+      "it is found in the Branch, not in anklets and perfume.",
+    points: [
+      "Who receives it: the “survivors” (peletah), the remnant from 1:9.",
+    ],
+  },
+  {
+    ref: [4, 3],
+    phrase: ["shall be called holy"],
+    title: "A holy people, written for life",
+    body:
+      "In Isaiah, God is “the Holy One of Israel.” Now the remnant shares " +
+      "his name: they are called holy. The phrase “recorded for life” is the " +
+      "book of life idea, found in Exodus 32:32, Daniel 12:1, Philippians " +
+      "4:3 and Revelation 21:27.",
+  },
+  {
+    ref: [4, 4],
+    phrase: ["the Lord shall have washed away the filth"],
+    title: "The Lord does the washing",
+    body:
+      "This verse is the hinge of the whole section. In 1:16 the command was " +
+      "“Wash yourselves; make yourselves clean.” They didn’t and couldn’t. " +
+      "In 4:4 the Lord washes them. The imperative of chapter 1 becomes " +
+      "God’s own act in chapter 4.",
+    points: [
+      "“Filth” (tso’ah) is a crude word, literally excrement. It’s the same " +
+        "root as the “filthy garments” (tso’im) of Joshua the high priest " +
+        "in Zechariah 3:3–4. That is the chapter where God removes the " +
+        "filthy garments and then announces “my servant the Branch” (3:8). " +
+        "Isaiah 4 and Zechariah 3 link filth, cleansing and the Branch in " +
+        "the same way.",
+      "“Bloodstains” answers 1:15: “your hands are full of blood.”",
+      "“A spirit of judgment and a spirit of burning” is the smelting of " +
+        "1:25, where the dross is burned away. The cleansing isn’t gentle. " +
+        "It is done by fire.",
+    ],
+  },
+  {
+    ref: [4, 4],
+    title: "The washing",
+    body:
+      "What 4:4 promises is what Christ does for his church: “having " +
+      "cleansed her by the washing of water with the word, so that he might " +
+      "present the church to himself in splendour, without spot” (Ephesians " +
+      "5:26–27). The washed daughter of Zion becomes the bride.",
+    points: [
+      "The “spirit of judgment and of burning” is picked up by John the " +
+        "Baptist: the one coming after him will baptise “with the Holy " +
+        "Spirit and fire” (Matthew 3:11; compare the refiner’s fire of " +
+        "Malachi 3:2–3).",
+    ],
+    episode: CHRIST,
+  },
+  {
+    ref: [4, 5],
+    phrase: ["a canopy"],
+    title: "God’s glory as a canopy",
+    body:
+      "The Exodus returns. The pillar of cloud and fire that led Israel out " +
+      "of Egypt now rests over the whole city and its assemblies, not only " +
+      "over the tabernacle. The whole of Zion becomes the Holy of Holies.",
+    points: [
+      "“Create” is bara, the verb of Genesis 1, used only with God as " +
+        "subject. This is new creation.",
+      "“Canopy” is chuppah, the wedding canopy (Psalm 19:5; Joel 2:16). The " +
+        "daughters of Zion, stripped in shame in chapter 3, are washed in " +
+        "verse 4 and brought under a bridal canopy in verse 5.",
+    ],
+  },
+  {
+    ref: [4, 5],
+    title: "The glory dwelling among them",
+    body:
+      "“The Word became flesh and tabernacled among us, and we have seen his " +
+      "glory” (John 1:14). The cloud and fire over Zion take on flesh in " +
+      "Jesus.",
+    episode: CHRIST,
+  },
+  {
+    ref: [4, 6],
+    phrase: ["a pavilion for a shade"],
+    title: "God himself is the booth",
+    body:
+      "“Booth” is sukkah. In 1:8, Zion was “left like a booth in a " +
+      "vineyard,” a flimsy watchman’s hut in an abandoned field. Now God " +
+      "himself is the sukkah over them.",
+  },
+  {
+    ref: [4, 6],
+    title: "Shelter from the heat",
+    body:
+      "Revelation 7:15–16 describes the redeemed: God “will spread his tent " +
+      "over them”; “the sun shall not strike them, nor any scorching heat,” " +
+      "because the Lamb is their shepherd. That draws on Isaiah 49:10, and " +
+      "it’s the same picture as 4:6.",
     episode: CHRIST,
   },
 ];

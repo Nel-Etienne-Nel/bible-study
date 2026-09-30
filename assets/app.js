@@ -339,11 +339,25 @@
      alternating sides. Each note sits level with its verse, or as close as it
      can get — a note is pushed down when the one above it in the same column
      would otherwise overlap. Narrow screens leave them in the flow. */
+  /* On a wide screen the notes move out of the text and into the margins,
+     alternating sides. Each note sits level with its verse, or as close as it
+     can get — a note is pushed down when the one above it in the same column
+     would otherwise overlap. Narrow screens leave them in the flow.
+
+     Chapter marks and section heads are barriers: a note never sits beside
+     the next chapter's text. When the notes before a barrier run long, the
+     barrier is pushed down until they have finished. */
   function layoutNotes() {
     var root = document.getElementById("scripture");
     var wide = window.innerWidth >= MARGIN_MIN_WIDTH;
 
     root.classList.toggle("notes-margin", wide);
+
+    // undo the previous pass's barrier spacing before measuring anything
+    root.querySelectorAll("[data-spacer]").forEach(function (el) {
+      el.style.marginTop = "";
+      el.removeAttribute("data-spacer");
+    });
 
     if (!wide) {
       panels.forEach(function (entry) {
@@ -354,23 +368,40 @@
       return;
     }
 
+    panels.forEach(function (entry) {
+      entry.panel._anchor = entry.anchor;
+    });
+
     var rootTop = root.getBoundingClientRect().top;
     var bottom = [0, 0]; // running bottom edge of the left and right columns
     var GAP = 28;
+    var top = function (el) {
+      return el.getBoundingClientRect().top - rootTop;
+    };
 
-    panels.forEach(function (entry) {
-      var panel = entry.panel;
-      if (panel.hidden) return;
+    root.querySelectorAll(".note, .section-head, .chapter-mark").forEach(function (el) {
+      if (el.classList.contains("note")) {
+        if (el.hidden || !el._anchor) return;
+        // Whichever column has more room keeps the note nearest its verse.
+        var col = bottom[0] <= bottom[1] ? 0 : 1;
+        el.classList.toggle("note--left", col === 0);
+        el.classList.toggle("note--right", col === 1);
+        var at = Math.max(top(el._anchor), bottom[col]);
+        el.style.top = at + "px";
+        bottom[col] = at + el.offsetHeight + GAP;
+        return;
+      }
 
-      // Whichever column has more room keeps the note nearest its verse.
-      var col = bottom[0] <= bottom[1] ? 0 : 1;
-      panel.classList.toggle("note--left", col === 0);
-      panel.classList.toggle("note--right", col === 1);
-
-      var wanted = entry.anchor.getBoundingClientRect().top - rootTop;
-      var top = Math.max(wanted, bottom[col]);
-      panel.style.top = top + "px";
-      bottom[col] = top + panel.offsetHeight + GAP;
+      // A barrier. Margins can collapse into the block above, so nudge and
+      // re-measure rather than trusting one adjustment.
+      var reach = Math.max(bottom[0], bottom[1]);
+      for (var tries = 0; tries < 4; tries++) {
+        var need = reach - top(el);
+        if (need <= 0.5) break;
+        var current = parseFloat(getComputedStyle(el).marginTop) || 0;
+        el.style.marginTop = current + need + "px";
+        el.setAttribute("data-spacer", "");
+      }
     });
 
     root.style.minHeight = Math.max(bottom[0], bottom[1]) + "px";

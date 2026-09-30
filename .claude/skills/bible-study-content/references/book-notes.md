@@ -43,6 +43,12 @@ own, and there's no `number` or `end` to worry about.
 - **A cross-cutting theme** the owner groups separately (Isaiah's "Where
   Christ comes into view") becomes notes stacked on the relevant verses,
   labelled with `episode: "<theme name>"` so the label prints on each.
+- **Mind the density on short passages.** Several notes on a few verses of
+  prose — Isaiah 4:2–6 has ten on one paragraph — turn the text into a wall
+  of highlight. Give each note one phrase at most there, and let a note go
+  without one if a neighbour already marks the same words. Near-duplicate
+  notes on the same verse (one already there from the chapter before) are
+  better merged than stacked.
 - **Their quotations may be from another translation.** Leave their quotes
   as written; take highlight `phrase`s from `tools/verses.js`, or they
   won't land.

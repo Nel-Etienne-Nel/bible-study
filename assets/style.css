@@ -814,6 +814,16 @@ mark {
     widows: 2;
   }
 
+  /* the screen layout may have pushed headings down to clear long margin
+     notes; in print the notes are back in the flow, so drop that spacing */
+  .section-head[data-spacer] {
+    margin-top: 0 !important;
+  }
+
+  .chapter-mark[data-spacer] {
+    margin-top: 1.6rem !important;
+  }
+
   /* undo the margin layout entirely */
   .notes-margin .note,
   .note {
