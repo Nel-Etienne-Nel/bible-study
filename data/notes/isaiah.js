@@ -97,6 +97,28 @@ window.SECTIONS = [
       ],
     },
   },
+  {
+    id: "chapter-5-vineyard",
+    title: "Chapter 5: The Song of the Vineyard",
+    range: "5:1 – 5:30",
+    start: [5, 1],
+    summary:
+      "It closes off the opening section of the book (chapters 1–5). It " +
+      "also brings to a head the “you have devoured the vineyard” charge " +
+      "from 3:14.",
+    episode: {
+      mainPoints: [
+        "vv. 1–7: the Song of the Vineyard, a parable that springs a trap",
+        "vv. 8–24: six “woes” spelling out what the bad fruit looks like",
+        "vv. 25–30: God’s hand stretched out in judgment, and an enemy " +
+          "summoned from afar",
+        "Chapter 6 picks up straight from here. After six woes on the " +
+          "people, Isaiah sees the Lord “high and lifted up” and cries a " +
+          "seventh woe, this time on himself: “Woe is me! For I am lost; for " +
+          "I am a man of unclean lips” (6:5).",
+      ],
+    },
+  },
 ];
 
 window.NOTES = [
@@ -622,5 +644,242 @@ window.NOTES = [
       "because the Lamb is their shepherd. That draws on Isaiah 49:10, and " +
       "it’s the same picture as 4:6.",
     episode: CHRIST,
+  },
+
+  // ---- Chapter 5 ---------------------------------------------------------
+
+  {
+    ref: [5, 1],
+    phrase: ["Let me sing for my well beloved"],
+    title: "A love song at a harvest festival",
+    body:
+      "It starts like a love song at a harvest festival: “Let me sing for my " +
+      "beloved my love song concerning his vineyard.” The listeners would " +
+      "have leaned in.",
+  },
+  {
+    ref: [5, 2],
+    phrase: ["but it yielded wild grapes"],
+    title: "The care",
+    body:
+      "The owner does everything right (vv. 1–2). He looked for grapes, and " +
+      "it produced “wild grapes” (be’ushim), literally stinking, rotten " +
+      "things.",
+    points: [
+      "He picks a “very fertile hill,” literally “a horn, son of oil.”",
+      "He digs it and clears the stones.",
+      "He plants choice vines (soreq).",
+      "He builds a watchtower and hews a winepress, a sign he expects a " +
+        "harvest.",
+    ],
+  },
+  {
+    ref: [5, 2],
+    title: "The parable Jesus retells",
+    body:
+      "In the parable of the wicked tenants (Matthew 21:33–45; Mark " +
+      "12:1–12), Jesus quotes Isaiah 5:2 almost word for word: planted a " +
+      "vineyard, put a hedge around it, dug a winepress, built a tower. Then " +
+      "he adds what Isaiah’s song left open. To the question “what more " +
+      "could I have done?” God answers: “Finally he sent his son to them.” " +
+      "The tenants kill him.",
+    points: [
+      "The chief priests “perceived that he was speaking about them,” " +
+        "exactly as the trap in Isaiah 5:3 was meant to work.",
+    ],
+    episode: CHRIST,
+  },
+  {
+    ref: [5, 3],
+    phrase: ["please judge between me and my vineyard"],
+    title: "The trap",
+    body:
+      "The singer turns to the audience: “Inhabitants of Jerusalem… judge " +
+      "between me and my vineyard. What more was there to do for my vineyard " +
+      "that I have not done?” (vv. 3–4). It works like Nathan’s parable to " +
+      "David (2 Samuel 12). The listeners agree the vineyard deserves to be " +
+      "torn up before they realise they’re judging themselves.",
+  },
+  {
+    ref: [5, 6],
+    phrase: ["I will also command the clouds"],
+    title: "The mask slips",
+    body:
+      "The owner will remove the hedge, break down the wall, and let briers " +
+      "and thorns take over (vv. 5–6). Then: “I will also command the clouds " +
+      "that they rain no rain upon it.” No farmer can command clouds. The " +
+      "singer’s “beloved” is God.",
+  },
+  {
+    ref: [5, 7],
+    phrase: ["he looked for justice, but, behold, oppression", "for righteousness, but, behold, a cry of distress"],
+    title: "The punchline",
+    body:
+      "A wordplay that’s impossible to translate. The words sound almost " +
+      "identical, and the reality is the opposite. He looked for — but " +
+      "behold:",
+    points: [
+      "mishpat (justice) — mispach (bloodshed)",
+      "tsedaqah (righteousness) — tse’aqah (an outcry)",
+      "Tse’aqah is the cry of the oppressed. It’s the cry of Israel in " +
+        "Egypt (Exodus 3:7) and the outcry against Sodom (Genesis " +
+        "18:20–21). Isaiah has already called Jerusalem “Sodom” twice " +
+        "(1:10; 3:9). God’s people have become the oppressor whose victims " +
+        "cry out to God.",
+    ],
+  },
+  {
+    ref: [5, 7],
+    title: "The true vine",
+    body:
+      "Israel is repeatedly called God’s vine that failed (Psalm 80:8–16; " +
+      "Jeremiah 2:21; Hosea 10:1). Jesus says, “I am the true vine… whoever " +
+      "abides in me bears much fruit, for apart from me you can do nothing” " +
+      "(John 15:1, 5). Isaiah 5 shows that a vineyard can have every " +
+      "advantage and still yield rotten fruit. John 15 answers that the " +
+      "fruit God looks for grows only from union with the Vine himself.",
+    points: [
+      "Psalm 80 already connected the two: “have regard for this vine… the " +
+        "son of man whom you made strong for yourself” (80:14–17).",
+    ],
+    episode: CHRIST,
+  },
+  {
+    ref: [5, 8],
+    phrase: ["join house to house"],
+    title: "Woe 1: Land-grabbing",
+    body:
+      "“Woe to those who join house to house, who add field to field.” Land " +
+      "in Israel was God’s gift, meant to stay with each family (Leviticus " +
+      "25; compare Naboth in 1 Kings 21). The rich bought it all up.",
+    points: [
+      "The judgment fits: ten acres of vineyard will yield one bath of wine " +
+        "(about 22 litres), and the seed will return only a tenth of what " +
+        "was sown (v. 10).",
+    ],
+  },
+  {
+    ref: [5, 12],
+    phrase: ["they don’t respect the work of Yahweh"],
+    title: "Woe 2: Partying without seeing God",
+    body:
+      "They drink from early morning, with music at every feast, “but they " +
+      "do not regard the deeds of the LORD” (vv. 11–12).",
+  },
+  {
+    ref: [5, 13],
+    phrase: ["for lack of knowledge"],
+    title: "Exile for lack of knowledge",
+    body:
+      "So “my people go into exile for lack of knowledge,” echoing 1:3: " +
+      "“Israel does not know.”",
+  },
+  {
+    ref: [5, 16],
+    phrase: ["exalted in justice", "sanctified in righteousness"],
+    title: "The theological centre of the chapter",
+    body:
+      "“The LORD of hosts is exalted in justice, and the Holy God shows " +
+      "himself holy in righteousness.” The same two words as v. 7, mishpat " +
+      "and tsedaqah. What God looked for in his people and didn’t find, he " +
+      "will display in himself.",
+  },
+  {
+    ref: [5, 16],
+    title: "Holy in righteousness",
+    body:
+      "Isaiah 5:16 says God will show himself holy by displaying mishpat and " +
+      "tsedaqah. Romans 3:25–26 says that at the cross God put Christ " +
+      "forward “to show his righteousness… so that he might be just and the " +
+      "justifier of the one who has faith in Jesus.” The justice God didn’t " +
+      "find in his vineyard is displayed at the cross, both as judgment and " +
+      "as gift.",
+    episode: CHRIST,
+  },
+  {
+    ref: [5, 18],
+    phrase: ["with cords of falsehood"],
+    title: "Woe 3: Harnessed to sin, mocking God",
+    body:
+      "They drag iniquity behind them “with cords of falsehood, sin as with " +
+      "cart ropes.” They have yoked themselves to their own sin. Then they " +
+      "taunt: “Let him hurry up and do his work, so we can see it” (v. 19). " +
+      "They make the judgment a joke.",
+  },
+  {
+    ref: [5, 20],
+    phrase: ["call evil good, and good evil"],
+    title: "Woe 4: Moral inversion",
+    body:
+      "“Woe to those who call evil good and good evil, who put darkness for " +
+      "light and light for darkness, bitter for sweet and sweet for bitter.”",
+  },
+  {
+    ref: [5, 21],
+    phrase: ["wise in their own eyes"],
+    title: "Woe 5: Self-sufficiency",
+    body: "“Woe to those who are wise in their own eyes.”",
+  },
+  {
+    ref: [5, 22],
+    phrase: ["mighty to drink wine"],
+    title: "Woe 6: Corrupt justice",
+    body:
+      "They are “heroes” at drinking and “valiant” at mixing drinks, while " +
+      "acquitting the guilty for a bribe and denying the innocent their " +
+      "rights (vv. 22–23). Their courage goes into the wine cup, not into " +
+      "justice.",
+  },
+  {
+    ref: [5, 24],
+    phrase: ["rejected the law of Yahweh of Armies"],
+    title: "The root of it all",
+    body:
+      "“They have rejected the law of the LORD of hosts, and have despised " +
+      "the word of the Holy One of Israel.” The fruit is rotten because the " +
+      "root is.",
+  },
+  {
+    ref: [5, 25],
+    phrase: ["his hand is still stretched out"],
+    title: "The refrain",
+    body:
+      "God’s anger burns, the mountains quake, and corpses lie in the " +
+      "streets. Then: “For all this his anger has not turned away, and his " +
+      "hand is stretched out still.” The same line returns four more times in " +
+      "9:12–10:4. Judgment so far has not produced repentance.",
+  },
+  {
+    ref: [5, 26],
+    phrase: ["he will whistle for them"],
+    title: "The whistle",
+    body:
+      "God “raises a signal (nes) for nations far away, and whistles for " +
+      "them from the ends of the earth.” Assyria isn’t named, but it is " +
+      "clearly meant. The army is described as tireless: no one stumbles or " +
+      "sleeps, arrows are sharp, chariot wheels are like a whirlwind, and " +
+      "they roar like lions carrying off prey (vv. 26–29).",
+  },
+  {
+    ref: [5, 26],
+    phrase: ["lift up a banner to the nations"],
+    title: "The signal reversed",
+    body:
+      "In 5:26 God raises a signal (nes) to summon enemy nations to destroy " +
+      "Jerusalem. In 11:10 the same word returns: “the root of Jesse, who " +
+      "shall stand as a signal for the peoples, of him shall the nations " +
+      "inquire.” The banner that once summoned armies becomes a Person who " +
+      "draws the nations in, back to the vision of 2:2–4. Paul quotes 11:10 " +
+      "in Romans 15:12 about Christ.",
+    episode: CHRIST,
+  },
+  {
+    ref: [5, 30],
+    phrase: ["The light is darkened in its clouds"],
+    title: "The darkness",
+    body:
+      "The chapter ends on darkness and distress, “the light is darkened by " +
+      "its clouds.” Compare 2:5: “come, let us walk in the light of the " +
+      "LORD.” They refused the light, and now they get the dark.",
   },
 ];
